@@ -50,11 +50,3 @@
 body {
   @apply bg-gray-100 text-gray-900;
 }
-
-button {
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  transform: scale(1.05);
-}

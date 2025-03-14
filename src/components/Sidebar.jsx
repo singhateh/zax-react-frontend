@@ -1,36 +1,50 @@
-import { FiHome, FiSettings } from "react-icons/fi";
 import SidebarItem from "./SidebarItem";
-import { MdManageAccounts } from "react-icons/md";
+import { capitalize, slugify } from "../utilities/utilities";
+import { useNavigate } from "react-router-dom";
+
+import {
+  Calendar,
+  FileText,
+  FolderOpen,
+  UserRoundCog,
+  Settings,
+  House,
+} from "lucide-react";
+import "../../src/Icon.css";
 
 const iconMap = {
-  doctors: <FiHome />,
-  "account settings": <MdManageAccounts />,
-  settings: <FiSettings />,
+  doctors: <House />,
+  "account settings": <UserRoundCog />,
+  settings: <Settings />,
+  "zax cal": <Calendar />,
+  invoices: <FileText />,
+  cases: <FolderOpen />,
 };
 
-const Sidebar = ({ isOpen, setActiveSection, tabConfig }) => {
-  const menuItems = Object.keys(tabConfig).map((menuItem) => ({
-    icon: iconMap[menuItem],
-    text: menuItem,
-    section: menuItem,
+const Sidebar = ({ menuConfig }) => {
+  const navigate = useNavigate();
+  const menuItems = Object.keys(menuConfig).map((menuItem) => ({
+    icon: iconMap[menuItem.toLowerCase()],
+    text: capitalize(menuItem),
+    item: menuItem,
+    slug: `/${slugify(menuItem)}`,
   }));
 
   return (
     <div className="bg-blue-900 text-white fixed lg:relative h-full transition-all duration-300 w-40">
       <div className="bg-cyan-950 flex items-center justify-between p-4 border-b border-gray-700">
-        <span className={`text-xl font-bold ${!isOpen && "hidden"}`}>
-          Zax Tech
-        </span>
+        <span className="text-xl font-bold">Zax Tech</span>
       </div>
-      <nav className="flex flex-col gap-4 p-4">
+      <nav className="flex flex-col">
         {menuItems.map((item) => (
           <SidebarItem
-            key={item.text}
+            key={item.slug}
             icon={item.icon}
             text={item.text}
-            isOpen={isOpen}
+            // isActive={activeTab === item.slug}
             onClick={() => {
-              setActiveSection(item.section);
+              console.log(`Navigating to ${item.slug}`);
+              navigate(item.slug);
             }}
           />
         ))}
