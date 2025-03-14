@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiBell, FiSettings, FiLogOut, FiTool } from "react-icons/fi";
 
-const Header = () => {
+const Header = ({ user, logout }) => {
   const [profileOpen, setProfileOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
 

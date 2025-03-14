@@ -1,6 +1,5 @@
 import SidebarItem from "./SidebarItem";
-import { capitalize, slugify } from "../utilities/utilities";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import {
   Calendar,
@@ -11,6 +10,7 @@ import {
   House,
 } from "lucide-react";
 import "../../src/Icon.css";
+import { NavLink } from "react-router-dom";
 
 const iconMap = {
   doctors: <House />,
@@ -18,17 +18,19 @@ const iconMap = {
   settings: <Settings />,
   "zax cal": <Calendar />,
   invoices: <FileText />,
-  cases: <FolderOpen />,
+  "manage cases": <FolderOpen />,
 };
 
-const Sidebar = ({ menuConfig }) => {
-  const navigate = useNavigate();
-  const menuItems = Object.keys(menuConfig).map((menuItem) => ({
-    icon: iconMap[menuItem.toLowerCase()],
-    text: capitalize(menuItem),
-    item: menuItem,
-    slug: `/${slugify(menuItem)}`,
-  }));
+const Sidebar = () => {
+
+  const menuItems = [
+    { icon: iconMap.doctors, text: "Doctors", route: "/doctors" },
+    { icon: iconMap["account settings"], text: "Account Settings", route: "/account-settings" },
+    { icon: iconMap.settings, text: "Settings", route: "/settings" },
+    { icon: iconMap["zax cal"], text: "Zax Cal", route: "/zax-cal" },
+    { icon: iconMap["manage cases"], text: "Manage cases", route: "/manage-cases" },
+    { icon: iconMap["invoices"], text: "Invoices", route: "/Invoices" },
+  ];
 
   return (
     <div className="bg-blue-900 text-white fixed lg:relative h-full transition-all duration-300 w-40">
@@ -37,20 +39,24 @@ const Sidebar = ({ menuConfig }) => {
       </div>
       <nav className="flex flex-col">
         {menuItems.map((item) => (
-          <SidebarItem
-            key={item.slug}
-            icon={item.icon}
-            text={item.text}
-            // isActive={activeTab === item.slug}
-            onClick={() => {
-              console.log(`Navigating to ${item.slug}`);
-              navigate(item.slug);
-            }}
-          />
+          <NavLink to={item.route} >
+            <SidebarItem
+              key={item.route}
+              icon={item.icon}
+              text={item.text}
+            />
+          </NavLink>
+
+
         ))}
       </nav>
     </div>
   );
 };
 
+
+
+
 export default Sidebar;
+
+
