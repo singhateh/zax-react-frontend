@@ -29,10 +29,11 @@ export default Tabs;
 export const TabButton = ({ tab, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`py-2 px-4 rounded-md transition-all duration-200 ${active
-      ? "bg-red-500 text-white border-b-2 border-red-700"
-      : "bg-transparent text-gray-700 hover:bg-white"
-      } flex gap-2`}
+    className={`py-2 px-4 rounded-md transition-all duration-200 ${
+      active
+        ? "bg-red-500 text-white border-b-2 border-red-700"
+        : "bg-transparent text-gray-700 hover:bg-white"
+    } flex gap-2`}
   >
     <span className="mt-1">{tab.icon}</span>
     {capitalize(tab.label)}

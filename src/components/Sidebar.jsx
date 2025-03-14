@@ -1,6 +1,4 @@
 import SidebarItem from "./SidebarItem";
-// import { useNavigate } from "react-router-dom";
-
 import {
   Calendar,
   FileText,
@@ -22,13 +20,20 @@ const iconMap = {
 };
 
 const Sidebar = () => {
-
   const menuItems = [
     { icon: iconMap.doctors, text: "Doctors", route: "/doctors" },
-    { icon: iconMap["account settings"], text: "Account Settings", route: "/account-settings" },
+    {
+      icon: iconMap["account settings"],
+      text: "Account Settings",
+      route: "/account-settings/setup",
+    },
     { icon: iconMap.settings, text: "Settings", route: "/settings" },
     { icon: iconMap["zax cal"], text: "Zax Cal", route: "/zax-cal" },
-    { icon: iconMap["manage cases"], text: "Manage cases", route: "/manage-cases" },
+    {
+      icon: iconMap["manage cases"],
+      text: "Manage cases",
+      route: "/manage-cases",
+    },
     { icon: iconMap["invoices"], text: "Invoices", route: "/Invoices" },
   ];
 
@@ -39,24 +44,13 @@ const Sidebar = () => {
       </div>
       <nav className="flex flex-col">
         {menuItems.map((item) => (
-          <NavLink to={item.route} >
-            <SidebarItem
-              key={item.route}
-              icon={item.icon}
-              text={item.text}
-            />
+          <NavLink to={item.route}>
+            <SidebarItem key={item.route} icon={item.icon} text={item.text} />
           </NavLink>
-
-
         ))}
       </nav>
     </div>
   );
 };
 
-
-
-
 export default Sidebar;
-
-
