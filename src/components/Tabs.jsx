@@ -1,21 +1,25 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { capitalize } from "../utilities/utilities";
 
 const Tabs = ({ activeTab, setActiveTab, tabs }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab.label);
-    if (tab.route) navigate(tab.route);
+    if (tab.route) {
+      navigate(tab.route);
+      setActiveTab(tab.route); // Ensure sync with routing
+    }
   };
 
+
   return (
-    <div className="p-4 w-full flex justify-center bg-blue-300 shadow-inner gap-4">
+    <div className="bg-blue-300 fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)]  left-40 lg:left-40 px-0 flex justify-center items-center z-20 transition-all duration-300 h-12 shadow-inner">
       {tabs.map((tab, key) => (
         <TabButton
           key={key}
           tab={tab}
-          active={activeTab === tab.label}
+          active={location.pathname === tab.route} // Matches current route
           onClick={() => handleTabClick(tab)}
         />
       ))}
@@ -25,16 +29,15 @@ const Tabs = ({ activeTab, setActiveTab, tabs }) => {
 
 export default Tabs;
 
-// Tab Button Component
 export const TabButton = ({ tab, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`py-2 px-4 rounded-md transition-all duration-200 ${active
-      ? "bg-red-500 text-white border-b-2 border-red-700"
-      : "bg-transparent text-gray-700 hover:bg-white"
-      } flex gap-2`}
+    className={`py-1 px-3 text-sm rounded-md transition-all duration-200 cursor-pointer
+      ${active ? "bg-white text-black border-b-2 border-red-700" : "bg-transparent text-gray-700 hover:bg-white"}
+      flex gap-1 items-center`}
   >
-    <span className="mt-1">{tab.icon}</span>
+    <span className="text-xs">{tab.icon}</span> {/* Smaller icon */}
     {capitalize(tab.label)}
   </button>
 );
+

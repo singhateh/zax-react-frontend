@@ -1,5 +1,4 @@
 import SidebarItem from "./SidebarItem";
-// import { useNavigate } from "react-router-dom";
 
 import {
   Calendar,
@@ -33,7 +32,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-blue-900 text-white fixed lg:relative h-full transition-all duration-300 w-40">
+    <div className="bg-blue-900 text-white fixed lg:relative h-full transition-all duration-300 w-40 left-0">
       <div className="bg-cyan-950 flex items-center justify-between p-4 border-b border-gray-700">
         <span className="text-xl font-bold">Zax Tech</span>
       </div>

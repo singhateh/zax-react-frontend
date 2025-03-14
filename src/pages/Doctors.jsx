@@ -1,7 +1,6 @@
-
 function Doctors() {
   return (
-    <div className="text-4xl ">
+    <div className="p-4 text-lg font-semibold mt-10">
       Doctors content here
     </div>
   );

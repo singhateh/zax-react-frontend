@@ -1,41 +1,30 @@
-import React, { useEffect, useState } from 'react';
 import { useLocation, Outlet } from 'react-router-dom';
-import { FaListAlt, FaProductHunt, FaTypo3 } from 'react-icons/fa'; // New icons
 import Tabs from '../components/Tabs';
+import { Briefcase, MedalIcon, User2Icon } from 'lucide-react';
 
 const DoctorLayout = () => {
     const location = useLocation();
 
-    const [activeTab, setActiveTab] = useState('doctors');
-
-    // Tabs with updated icons and routes
     const tabs = [
-        { label: 'Doctors', icon: <FaProductHunt />, route: '/doctors' },
-        { label: 'Agencies', icon: <FaTypo3 />, route: '/doctors/agencies' },
-        { label: 'Solicitors', icon: <FaListAlt />, route: '/doctors/solicitors-diary' },
+        { label: 'Doctors', icon: <MedalIcon />, route: '/doctors' },
+        { label: 'Agencies', icon: <Briefcase />, route: '/doctors/agencies' },
+        { label: 'Solicitors', icon: <User2Icon />, route: '/doctors/solicitors-diary' },
     ];
 
-    useEffect(() => {
-        const currentTab = tabs.find(tab => location.pathname.includes(tab.route))?.route;
-        setActiveTab(currentTab);
-        console.log(currentTab);
-
-    }, []);
-
+    const activeTab = tabs.find(tab => location.pathname.includes(tab.route))?.route || '/doctors';
 
     return (
-        <div className="bg-white fixed w-full lg:w-[calc(100%-160px)] ">
+        <div className="fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)]  left-40 lg:left-40 px-0 flex justify-center items-center z-20 transition-all duration-300 h-12 shadow-inner">
             <Tabs
                 tabs={tabs}
                 activeTab={activeTab}
-                setActiveTab={setActiveTab}
-                // onTabChange={handleTabChange}
+                setActiveTab={() => { }}
                 containerClass="custom-tabs-container"
                 buttonClass="custom-tab-button"
                 activeButtonClass="custom-tab-active"
             />
 
-            <div className="w-full max-w-full">
+            <div className="w-full max-w-full mt-20">
                 <Outlet />
             </div>
         </div>
