@@ -18,9 +18,14 @@ import ZaxBillingSummary from "./pages/AccountSettings/ZaxBillingSummary";
 import ZaxAlerts from "./pages/AccountSettings/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import Invoices from "./pages/Invoices";
-import ZaxCal from "./pages/ZaxCal/ZaxCal";
 import Cases from "./pages/Cases/Cases";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import ZaxCalLayout from "./layouts/ZaxCalLayout";
+import SetUpVenue from "./pages/ZaxCal/SetUpVenue";
+import CreateSlots from "./pages/ZaxCal/CreateSlots";
+import BookAppointments from "./pages/ZaxCal/BookAppointments";
+import Diary from "./pages/ZaxCal/Diary";
+import PrintClinicList from "./pages/ZaxCal/PrintClinicList";
+import PrintDnaList from "./pages/ZaxCal/PrintDnaList";
 
 const router = createBrowserRouter([
   {
@@ -63,25 +68,28 @@ const router = createBrowserRouter([
         path: "/",
         element: <AccountSettingsLayout />,
         children: [
-          // { path: "/account-settings", element: <AccountSettings /> },
           { path: "/account-settings/setup", element: <AccountSetup /> },
-          {
-            path: "/account-settings/reports",
-            element: <ZaxReporting />,
-          },
-          {
-            path: "/account-settings/payment",
-            element: <PaymentSetup />,
-          },
-          {
-            path: "/account-settings/alerts",
-            element: <ZaxAlerts />,
-          },
+          { path: "/account-settings/reports", element: <ZaxReporting /> },
+          { path: "/account-settings/payment", element: <PaymentSetup /> },
+          { path: "/account-settings/alerts", element: <ZaxAlerts /> },
           { path: "/account-settings/billing", element: <ZaxBilling /> },
           {
             path: "/account-settings/billing-summary",
             element: <ZaxBillingSummary />,
           },
+        ],
+      },
+      {
+        path: "/",
+        element: <ZaxCalLayout />,
+        children: [
+          { path: "/zax-cal/setup-venue", element: <SetUpVenue /> },
+          { path: "/zax-cal/create-slots", element: <CreateSlots /> },
+          { path: "/zax-cal/book-appointments", element: <BookAppointments /> },
+          { path: "/zax-cal/diary", element: <Diary /> },
+          { path: "/zax-cal/print-clinic-list", element: <PrintClinicList /> },
+          { path: "/zax-cal/print-dna-list", element: <PrintDnaList /> },
+          { path: "/zax-cal/manage-csv", element: <PrintDnaList /> },
         ],
       },
       {
@@ -98,11 +106,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <ZaxAlerts />,
         children: [{ path: "/zax-alerts", element: <ZaxAlerts /> }],
-      },
-      {
-        path: "/",
-        element: <ZaxCal />,
-        children: [{ path: "/zax-cal", element: <ZaxCal /> }],
       },
       {
         path: "/",

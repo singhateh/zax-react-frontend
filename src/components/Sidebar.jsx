@@ -29,6 +29,7 @@ const Sidebar = () => {
       text: "Account",
       route: "/account-settings/setup",
     },
+
     {
       icon: <BriefcaseMedical />,
       text: "Instruct Case",
