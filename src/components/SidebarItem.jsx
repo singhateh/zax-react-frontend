@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const SidebarItem = ({ icon, text, isActive, onClick }) => {
+const SidebarItem = ({ icon, text, onClick, activeSidebarItem }) => {
   const { pathname } = useLocation();
 
   return (
@@ -15,11 +15,7 @@ const SidebarItem = ({ icon, text, isActive, onClick }) => {
         }
       }}
       className={`flex items-center gap-3 p-2 rounded cursor-pointer text-[18px] 
-        ${
-          isActive || pathname.includes(text.toLowerCase())
-            ? "bg-blue-800"
-            : "hover:bg-blue-800"
-        }`}
+        ${activeSidebarItem === text ? "bg-blue-800" : "hover:bg-blue-800"}`}
     >
       {React.cloneElement(icon, {
         className: "w-5 h-5 text-white",

@@ -2,14 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import AuthLayout from "./layouts/AuthLayout";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
-import Doctors from "./pages/Doctors";
+import Doctors from "./pages/Doctors/Doctors";
 import DoctorLayout from "./layouts/DoctorLayout";
-import Agencies from "./pages/Agencies";
-import AgenciesNote from "./pages/AgenciesNote";
-import SolicitorsDiary from "./pages/SolicitorsDiary";
+import Agencies from "./pages/Doctors/Agencies";
+import AgenciesNote from "./pages/Doctors/AgenciesNote";
+import SolicitorsDiary from "./pages/Doctors/SolicitorsDiary";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import GuestLayout from "./layouts/GuestLayout";
-import AccountSettings from "./pages/AccountSettings/AccountSettings";
+import Settings from "./pages/Settings/Settings";
 import AccountSetup from "./pages/AccountSettings/AccountSetup";
 import PaymentSetup from "./pages/AccountSettings/PaymentSetup";
 import ZaxReporting from "./pages/AccountSettings/ZaxReporting";
@@ -17,6 +17,9 @@ import ZaxBilling from "./pages/AccountSettings/ZaxBilling";
 import ZaxBillingSummary from "./pages/AccountSettings/ZaxBillingSummary";
 import ZaxAlerts from "./pages/AccountSettings/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
+import Invoices from "./pages/Invoices";
+import ZaxCal from "./pages/ZaxCal/ZaxCal";
+import Cases from "./pages/Cases/Cases";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +72,41 @@ const router = createBrowserRouter([
             element: <ZaxBillingSummary />,
           },
         ],
+      },
+      {
+        path: "/",
+        element: <Settings />,
+        children: [{ path: "/settings", element: <Settings /> }],
+      },
+      {
+        path: "/",
+        element: <Invoices />,
+        children: [{ path: "/invoices", element: <Invoices /> }],
+      },
+      {
+        path: "/",
+        element: <ZaxAlerts />,
+        children: [{ path: "/zax-alerts", element: <ZaxAlerts /> }],
+      },
+      {
+        path: "/",
+        element: <ZaxCal />,
+        children: [{ path: "/zax-cal", element: <ZaxCal /> }],
+      },
+      {
+        path: "/",
+        element: <ZaxReporting />,
+        children: [{ path: "/zax-reports", element: <ZaxReporting /> }],
+      },
+      {
+        path: "/",
+        element: <ZaxBilling />,
+        children: [{ path: "/zax-billing", element: <ZaxBilling /> }],
+      },
+      {
+        path: "/",
+        element: <Cases />,
+        children: [{ path: "/manage-cases", element: <Cases /> }],
       },
     ],
   },

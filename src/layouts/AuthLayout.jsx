@@ -21,7 +21,7 @@ export default function AuthLayout() {
 
   return (
     <div className="flex h-screen">
-      <div className="fixed lg:relative w-40">
+      <div className="  w-48">
         <Sidebar />
       </div>
       <div className="flex-1 flex flex-col pt-16 overflow-auto lg:pl-40">
