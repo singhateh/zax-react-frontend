@@ -10,6 +10,10 @@ import {
   BadgePoundSterling,
   ScrollText,
   OctagonAlert,
+  LayoutDashboard,
+  BriefcaseMedical,
+  SquareLibrary,
+  Mail,
   ReceiptText,
 } from "lucide-react";
 import "../../src/Icon.css";
@@ -18,25 +22,42 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const location = useLocation();
   const menuItems = [
+    { icon: <LayoutDashboard />, text: "Dashboard", route: "/doctors" },
     { icon: <House />, text: "Doctors", route: "/doctors" },
     {
       icon: <UserRoundCog />,
       text: "Account",
       route: "/account-settings/setup",
     },
-    { icon: <Settings />, text: "Settings", route: "/settings" },
-    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal/setup-venue" },
-    { icon: <BadgePoundSterling />, text: "Invoices", route: "/invoices" },
+
     {
-      icon: <FolderOpen />,
-      text: "Cases",
+      icon: <BriefcaseMedical />,
+      text: "Instruct Case",
+      route: "/instruct-case",
+    },
+    {
+      icon: <BriefcaseMedical />,
+      text: "Manage Cases",
       route: "/manage-cases",
     },
+    {
+      icon: <SquareLibrary />,
+      text: "Medical Records",
+      route: "/medical-records",
+    },
+    { icon: <Mail />, text: "General Letters", route: "/general-letters" },
+    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal" },
     { icon: <ScrollText />, text: "Zax Reports", route: "/zax-reports" },
+    { icon: <ReceiptText />, text: "Invoices", route: "/invoices" },
     {
       icon: <BadgePoundSterling />,
       text: "Zax Billing",
       route: "/zax-billing",
+    },
+    {
+      icon: <BadgePoundSterling />,
+      text: "Zax Billing Summary",
+      route: "/zax-billing-summary",
     },
     { icon: <OctagonAlert />, text: "Zax Alerts", route: "/zax-alerts" },
   ];
