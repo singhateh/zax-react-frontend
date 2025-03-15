@@ -26,6 +26,9 @@ import BookAppointments from "./pages/ZaxCal/BookAppointments";
 import Diary from "./pages/ZaxCal/Diary";
 import PrintClinicList from "./pages/ZaxCal/PrintClinicList";
 import PrintDnaList from "./pages/ZaxCal/PrintDnaList";
+import InvoiceLayout from "./layouts/InvoiceLayout";
+import ManageInvoices from "./pages/Invoices/ManagaInvoices";
+import InvoicesReports from "./pages/Invoices/InvoicesReports";
 
 const router = createBrowserRouter([
   {
@@ -84,8 +87,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Settings />,
-        children: [{ path: "/settings", element: <Settings /> }],
+        element: <InvoiceLayout />,
+        children: [
+          { path: "/invoices/manage", element: <ManageInvoices /> },
+          { path: "/invoices/reports", element: <InvoicesReports /> },
+        ],
       },
       {
         path: "/",
