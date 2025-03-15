@@ -5,11 +5,12 @@ import { RouterProvider } from "react-router-dom";
 
 function App() {
   return (
-    <React.StrictMode>
-      <ContextProvider>
-        <RouterProvider router={router} />
-      </ContextProvider>
-    </React.StrictMode>
+    <ContextProvider>
+      <RouterProvider router={router} />
+    </ContextProvider>
+    // <React.StrictMode>
+
+    // </React.StrictMode>
   );
 }
 
