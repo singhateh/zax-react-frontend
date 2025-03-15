@@ -20,12 +20,23 @@ import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import Invoices from "./pages/Invoices";
 import ZaxCal from "./pages/ZaxCal/ZaxCal";
 import Cases from "./pages/Cases/Cases";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AuthLayout />,
     children: [
+      {
+        path: "/", // Prefix
+        element: <Dashboard />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Doctors />,
+          },
+        ],
+      },
       {
         path: "/", // Prefix
         element: <DoctorLayout />,

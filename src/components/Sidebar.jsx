@@ -22,7 +22,7 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const location = useLocation();
   const menuItems = [
-    { icon: <LayoutDashboard />, text: "Dashboard", route: "/doctors" },
+    { icon: <LayoutDashboard />, text: "Dashboard", route: "/dashboard" },
     { icon: <House />, text: "Doctors", route: "/doctors" },
     {
       icon: <UserRoundCog />,
