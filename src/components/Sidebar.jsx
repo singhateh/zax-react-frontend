@@ -25,7 +25,7 @@ const Sidebar = () => {
       route: "/account-settings/setup",
     },
     { icon: <Settings />, text: "Settings", route: "/settings" },
-    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal" },
+    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal/setup-venue" },
     { icon: <BadgePoundSterling />, text: "Invoices", route: "/invoices" },
     {
       icon: <FolderOpen />,
