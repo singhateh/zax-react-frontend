@@ -31,7 +31,7 @@ const Tabs = ({ activeTab, setActiveTab, tabs }) => {
         <TabButton
           key={key}
           tab={tab}
-          active={location.pathname === tab.route} // Matches current route
+          active={location.pathname === tab.route}
           onClick={() => handleTabClick(tab)}
         />
       ))}
