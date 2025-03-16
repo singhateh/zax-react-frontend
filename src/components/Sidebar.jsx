@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import "../../src/Icon.css";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -49,21 +50,22 @@ const Sidebar = () => {
     },
   ];
 
-  //   const activeItem = menuItems.find(
-  //     (item) => {
-  //       location.pathname === item.route ||
-  //       location.pathname.startsWith(`${item.route}/`)
-  // });
   const activeItem = menuItems.find((item) => {
     const itemFirstSegment = item.route.split("/")[1];
     const pathFirstSegment = location.pathname.split("/")[1];
     return itemFirstSegment === pathFirstSegment;
   });
 
-  console.log(activeItem);
+  const activeSidebarItem = activeItem.text ? activeItem.text : "Dashboard";
 
-  const activeSidebarItem = activeItem.text; // ? activeItem.text : "Dashboard";
-  console.log(activeSidebarItem);
+  useEffect(() => {
+    document.title = activeSidebarItem;
+    const pageHeader = document.querySelector(".page-header");
+    if (pageHeader) {
+      pageHeader.innerHTML = `<h2 class="text-3xl font-bold">${activeSidebarItem}</h2>`;
+    }
+  }),
+    [activeSidebarItem];
 
   return (
     <div className="bg-[#4D55CC] text-white fixed lg:relative h-full transition-all duration-300 w-45 left-0">
