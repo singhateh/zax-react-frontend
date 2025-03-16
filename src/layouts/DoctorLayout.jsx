@@ -1,17 +1,17 @@
 import { useLocation, Outlet } from "react-router-dom";
 import Tabs from "../components/Tabs";
-import { Briefcase, MedalIcon, User2Icon } from "lucide-react";
+import { Briefcase, Scale, User2Icon } from "lucide-react";
 import { useState } from "react";
 
 const DoctorLayout = () => {
   const [activeTab, setActiveTab] = useState("Doctors");
 
   const tabs = [
-    { label: "Doctors", icon: <MedalIcon />, route: "/doctors" },
+    { label: "Doctors", icon: <User2Icon />, route: "/doctors" },
     { label: "Agencies", icon: <Briefcase />, route: "/doctors/agencies" },
     {
       label: "Solicitors",
-      icon: <User2Icon />,
+      icon: <Scale />,
       route: "/doctors/solicitors-diary",
     },
   ];

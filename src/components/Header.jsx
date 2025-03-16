@@ -6,7 +6,7 @@ const Header = ({ user, logout }) => {
   const [notificationsOpen, setNotificationsOpen] = useState(false);
 
   return (
-    <div className="bg-white fixed w-[calc(100%-40px)] lg:w-[calc(100%-160px)] top-0 left-40 lg:left-40 px-2 shadow-md flex justify-between items-center z-50 transition-all duration-300 h-16">
+    <div className="bg-white fixed w-[calc(100%-45px)] lg:w-[calc(100%-160px)] top-0 left-45 lg:left-45 px-2 shadow-md flex justify-between items-center z-50 transition-all duration-300 h-16">
       <h2 className="text-3xl font-bold">Dashboard</h2>
       <div className="flex items-center gap-6 relative">
         {/* Notifications */}

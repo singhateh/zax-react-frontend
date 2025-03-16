@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Tabs from "../components/Tabs";
-import { Briefcase, MedalIcon, User2Icon } from "lucide-react";
+import { Briefcase, BriefcaseMedical, Mail } from "lucide-react";
 import { useState } from "react";
 
 const DoctorLayout = () => {
@@ -9,7 +9,7 @@ const DoctorLayout = () => {
   const tabs = [
     {
       label: "Manage Cases",
-      icon: <MedalIcon />,
+      icon: <BriefcaseMedical />,
       route: "/cases/manage-cases",
     },
     {
@@ -19,7 +19,7 @@ const DoctorLayout = () => {
     },
     {
       label: "General Letters",
-      icon: <User2Icon />,
+      icon: <Mail />,
       route: "/cases/general-letters",
     },
   ];

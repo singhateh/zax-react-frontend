@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Wrench,
-  BadgePoundSterling,
-  ScrollText,
-  OctagonAlert,
-  ReceiptText,
-} from "lucide-react";
+import { BadgePoundSterling, OctagonAlert } from "lucide-react";
 import Tabs from "../components/Tabs";
 import { Outlet } from "react-router-dom";
 
