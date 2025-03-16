@@ -3,15 +3,12 @@ import { useLocation } from "react-router-dom";
 
 import {
   Calendar,
-  FolderOpen,
   UserRoundCog,
   House,
   BadgePoundSterling,
   ScrollText,
   LayoutDashboard,
   BriefcaseMedical,
-  SquareLibrary,
-  Mail,
   ReceiptText,
 } from "lucide-react";
 import "../../src/Icon.css";
@@ -33,12 +30,6 @@ const Sidebar = () => {
       text: "Manage Cases",
       route: "/cases/manage-cases",
     },
-    // {
-    //   icon: <SquareLibrary />,
-    //   text: "Medical Records",
-    //   route: "/cases/medical-records",
-    // },
-    // { icon: <Mail />, text: "General Letters", route: "/general-letters" },
     { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal/setup-venue" },
     { icon: <ScrollText />, text: "Zax Reports", route: "/zax-reports" },
     {
@@ -58,14 +49,24 @@ const Sidebar = () => {
     },
   ];
 
-  const activeSidebarItem = menuItems.find(
-    (item) =>
-      location.pathname === item.route ||
-      location.pathname.startsWith(`${item.route}/`)
-  );
+  //   const activeItem = menuItems.find(
+  //     (item) => {
+  //       location.pathname === item.route ||
+  //       location.pathname.startsWith(`${item.route}/`)
+  // });
+  const activeItem = menuItems.find((item) => {
+    const itemFirstSegment = item.route.split("/")[1];
+    const pathFirstSegment = location.pathname.split("/")[1];
+    return itemFirstSegment === pathFirstSegment;
+  });
+
+  console.log(activeItem);
+
+  const activeSidebarItem = activeItem.text; // ? activeItem.text : "Dashboard";
+  console.log(activeSidebarItem);
 
   return (
-    <div className="bg-blue-900 text-white fixed lg:relative h-full transition-all duration-300 w-40 left-0">
+    <div className="bg-[#4D55CC] text-white fixed lg:relative h-full transition-all duration-300 w-45 left-0">
       <div className="bg-cyan-950 flex items-center justify-between p-4 border-b border-gray-700">
         <span className="text-xl font-bold">Zax Tech</span>
       </div>
