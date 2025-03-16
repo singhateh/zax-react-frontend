@@ -26,6 +26,10 @@ import BookAppointments from "./pages/ZaxCal/BookAppointments";
 import Diary from "./pages/ZaxCal/Diary";
 import PrintClinicList from "./pages/ZaxCal/PrintClinicList";
 import PrintDnaList from "./pages/ZaxCal/PrintDnaList";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import GeneralLetters from "./pages/GeneralLetters/GeneralLetters";
+import MedicalRecords from "./pages/MedicalRecords/MedicalRecords";
+import InstructCase from "./pages/InstructCase/InstructCase";
 
 const router = createBrowserRouter([
   {
@@ -34,11 +38,41 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", // Prefix
-        element: <Dashboard />,
+        element: <Dashboard />, // ! REPLACE WITH DASHBOARD LAYOUT
         children: [
           {
             path: "/dashboard",
             element: <Doctors />,
+          },
+        ],
+      },
+      {
+        path: "/", // Prefix
+        element: <GeneralLetters />, // ! REPLACE WITH GENERAL LETTERS LAYOUT
+        children: [
+          {
+            path: "/general-letters",
+            element: <GeneralLetters />,
+          },
+        ],
+      },
+      {
+        path: "/", // Prefix
+        element: <MedicalRecords />, // ! REPLACE WITH MEDICAL RECORDS LAYOUT
+        children: [
+          {
+            path: "/medical-records",
+            element: <MedicalRecords />,
+          },
+        ],
+      },
+      {
+        path: "/", // Prefix
+        element: <InstructCase />, // ! REPLACE WITH INSTRUCT CASE LAYOUT
+        children: [
+          {
+            path: "/instruct-case",
+            element: <InstructCase />,
           },
         ],
       },
