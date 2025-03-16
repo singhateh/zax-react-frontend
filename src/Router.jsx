@@ -11,10 +11,10 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import GuestLayout from "./layouts/GuestLayout";
 import AccountSetup from "./pages/AccountSettings/AccountSetup";
 import PaymentSetup from "./pages/AccountSettings/PaymentSetup";
-import ZaxReporting from "./pages/ZaxReporting";
-import ZaxBilling from "./pages/ZaxBilling";
-import ZaxBillingSummary from "./pages/ZaxBillingSummary";
-import ZaxAlerts from "./pages/ZaxAlerts";
+import ZaxReporting from "./pages/ZaxBilling/ZaxReporting";
+import ZaxBilling from "./pages/ZaxBilling/ZaxBilling";
+import ZaxBillingSummary from "./pages/ZaxBilling/ZaxBilling";
+import ZaxAlerts from "./pages/ZaxBilling/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import ZaxCalLayout from "./layouts/ZaxCalLayout";
 import SetUpVenue from "./pages/ZaxCal/SetUpVenue";
@@ -32,6 +32,7 @@ import ManageCaseLayout from "./layouts/ManageCaseLayout";
 import ManageInvoices from "./pages/Invoices/ManageInvoices";
 import InvoiceReports from "./pages/Invoices/InvoiceReports";
 import ManageInvoicesLayout from "./layouts/ManageInvoices";
+import ZaxBillingLayout from "./layouts/ZaxBillingLayout";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/", // Prefix
-        element: <InstructCase />, // ! NO LAYOUT NEEDED
+        element: <InstructCase />,
         children: [
           {
             path: "/instruct-case",
@@ -121,8 +122,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <ZaxBilling />,
-        children: [{ path: "/zax-billing", element: <ZaxBilling /> }],
+        element: <ZaxBillingLayout />,
+        children: [
+          { path: "/zax/billing", element: <ZaxBilling /> },
+          { path: "/zax/billing-summary", element: <ZaxBillingSummary /> },
+          { path: "/zax/alerts", element: <ZaxAlerts /> },
+        ],
       },
       {
         path: "/",

@@ -49,7 +49,7 @@ const Sidebar = () => {
     {
       icon: <BadgePoundSterling />,
       text: "Zax Billing",
-      route: "/zax-billing",
+      route: "/zax/billing",
     },
     {
       icon: <UserRoundCog />,
