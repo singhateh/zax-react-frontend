@@ -31,14 +31,14 @@ const Sidebar = () => {
     {
       icon: <BriefcaseMedical />,
       text: "Manage Cases",
-      route: "/manage-cases",
+      route: "/cases/manage-cases",
     },
-    {
-      icon: <SquareLibrary />,
-      text: "Medical Records",
-      route: "/medical-records",
-    },
-    { icon: <Mail />, text: "General Letters", route: "/general-letters" },
+    // {
+    //   icon: <SquareLibrary />,
+    //   text: "Medical Records",
+    //   route: "/cases/medical-records",
+    // },
+    // { icon: <Mail />, text: "General Letters", route: "/general-letters" },
     { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal/setup-venue" },
     { icon: <ScrollText />, text: "Zax Reports", route: "/zax-reports" },
     { icon: <ReceiptText />, text: "Invoices", route: "/invoices" },

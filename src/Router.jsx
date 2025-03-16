@@ -18,7 +18,6 @@ import ZaxBillingSummary from "./pages/AccountSettings/ZaxBillingSummary";
 import ZaxAlerts from "./pages/AccountSettings/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import Invoices from "./pages/Invoices";
-import Cases from "./pages/Cases/Cases";
 import ZaxCalLayout from "./layouts/ZaxCalLayout";
 import SetUpVenue from "./pages/ZaxCal/SetUpVenue";
 import CreateSlots from "./pages/ZaxCal/CreateSlots";
@@ -27,9 +26,11 @@ import Diary from "./pages/ZaxCal/Diary";
 import PrintClinicList from "./pages/ZaxCal/PrintClinicList";
 import PrintDnaList from "./pages/ZaxCal/PrintDnaList";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import GeneralLetters from "./pages/GeneralLetters/GeneralLetters";
-import MedicalRecords from "./pages/MedicalRecords/MedicalRecords";
 import InstructCase from "./pages/InstructCase/InstructCase";
+import ManageCase from "./pages/ManageCase/ManageCase";
+import MedicalRecords from "./pages/ManageCase/MedicalRecords";
+import GeneralLetters from "./pages/ManageCase/GeneralLetters";
+import ManageCaseLayout from "./layouts/ManageCaseLayout";
 
 const router = createBrowserRouter([
   {
@@ -48,27 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/", // Prefix
-        element: <GeneralLetters />, // ! REPLACE WITH GENERAL LETTERS LAYOUT
-        children: [
-          {
-            path: "/general-letters",
-            element: <GeneralLetters />,
-          },
-        ],
-      },
-      {
-        path: "/", // Prefix
-        element: <MedicalRecords />, // ! REPLACE WITH MEDICAL RECORDS LAYOUT
-        children: [
-          {
-            path: "/medical-records",
-            element: <MedicalRecords />,
-          },
-        ],
-      },
-      {
-        path: "/", // Prefix
-        element: <InstructCase />, // ! REPLACE WITH INSTRUCT CASE LAYOUT
+        element: <InstructCase />, // ! NO LAYOUT NEEDED
         children: [
           {
             path: "/instruct-case",
@@ -128,11 +109,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Settings />,
-        children: [{ path: "/settings", element: <Settings /> }],
-      },
-      {
-        path: "/",
         element: <Invoices />,
         children: [{ path: "/invoices", element: <Invoices /> }],
       },
@@ -153,8 +129,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Cases />,
-        children: [{ path: "/manage-cases", element: <Cases /> }],
+        element: <ManageCaseLayout />,
+        children: [
+          { path: "/cases/manage-cases", element: <ManageCase /> },
+          { path: "/cases/medical-records", element: <MedicalRecords /> },
+          { path: "/cases/general-letters", element: <GeneralLetters /> },
+        ],
       },
     ],
   },
