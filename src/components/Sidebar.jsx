@@ -61,8 +61,7 @@ const Sidebar = () => {
     if (pageHeader) {
       pageHeader.innerHTML = `<h2 class="text-3xl font-bold">${activeSidebarItem}</h2>`;
     }
-  }),
-    [activeSidebarItem];
+  }, [activeSidebarItem]);
 
   return (
     <div className="bg-[#4D55CC] text-white fixed lg:relative h-full transition-all duration-300 w-45 left-0">
@@ -71,9 +70,8 @@ const Sidebar = () => {
       </div>
       <nav className="flex flex-col">
         {menuItems.map((item) => (
-          <NavLink to={item.route}>
+          <NavLink to={item.route} key={item.route}>
             <SidebarItem
-              key={item.route}
               icon={item.icon}
               text={item.text}
               activeSidebarItem={activeSidebarItem}
