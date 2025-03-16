@@ -9,7 +9,6 @@ import AgenciesNote from "./pages/Doctors/AgenciesNote";
 import SolicitorsDiary from "./pages/Doctors/SolicitorsDiary";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import GuestLayout from "./layouts/GuestLayout";
-import Settings from "./pages/Settings/Settings";
 import AccountSetup from "./pages/AccountSettings/AccountSetup";
 import PaymentSetup from "./pages/AccountSettings/PaymentSetup";
 import ZaxReporting from "./pages/AccountSettings/ZaxReporting";
@@ -17,7 +16,6 @@ import ZaxBilling from "./pages/AccountSettings/ZaxBilling";
 import ZaxBillingSummary from "./pages/AccountSettings/ZaxBillingSummary";
 import ZaxAlerts from "./pages/AccountSettings/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
-import Invoices from "./pages/Invoices";
 import ZaxCalLayout from "./layouts/ZaxCalLayout";
 import SetUpVenue from "./pages/ZaxCal/SetUpVenue";
 import CreateSlots from "./pages/ZaxCal/CreateSlots";
@@ -31,6 +29,9 @@ import ManageCase from "./pages/ManageCase/ManageCase";
 import MedicalRecords from "./pages/ManageCase/MedicalRecords";
 import GeneralLetters from "./pages/ManageCase/GeneralLetters";
 import ManageCaseLayout from "./layouts/ManageCaseLayout";
+import ManageInvoices from "./pages/Invoices/ManageInvoices";
+import InvoiceReports from "./pages/Invoices/InvoiceReports";
+import ManageInvoicesLayout from "./layouts/ManageInvoices";
 
 const router = createBrowserRouter([
   {
@@ -109,8 +110,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Invoices />,
-        children: [{ path: "/invoices", element: <Invoices /> }],
+        element: <ManageInvoicesLayout />,
+        children: [
+          { path: "/invoices/manage-invoices", element: <ManageInvoices /> },
+          { path: "/invoices/reports", element: <InvoiceReports /> },
+        ],
       },
       {
         path: "/",
