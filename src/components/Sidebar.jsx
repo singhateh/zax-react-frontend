@@ -50,13 +50,10 @@ const Sidebar = () => {
     },
   ];
 
-  const activeItem = menuItems.find((item) => {
-    const itemFirstSegment = item.route.split("/")[1];
-    const pathFirstSegment = location.pathname.split("/")[1];
-    return itemFirstSegment === pathFirstSegment;
-  });
-
-  const activeSidebarItem = activeItem.text ? activeItem.text : "Dashboard";
+  const pathFirstSegment = location.pathname.split("/")[1];
+  const activeSidebarItem =
+    menuItems.find((item) => item.route.split("/")[1] === pathFirstSegment)
+      ?.text || "Dashboard";
 
   useEffect(() => {
     document.title = activeSidebarItem;
