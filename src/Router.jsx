@@ -12,10 +12,10 @@ import GuestLayout from "./layouts/GuestLayout";
 import Settings from "./pages/Settings/Settings";
 import AccountSetup from "./pages/AccountSettings/AccountSetup";
 import PaymentSetup from "./pages/AccountSettings/PaymentSetup";
-import ZaxReporting from "./pages/AccountSettings/ZaxReporting";
-import ZaxBilling from "./pages/AccountSettings/ZaxBilling";
-import ZaxBillingSummary from "./pages/AccountSettings/ZaxBillingSummary";
-import ZaxAlerts from "./pages/AccountSettings/ZaxAlerts";
+import ZaxReporting from "./pages/ZaxReporting";
+import ZaxBilling from "./pages/ZaxBilling";
+import ZaxBillingSummary from "./pages/ZaxBillingSummary";
+import ZaxAlerts from "./pages/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import Invoices from "./pages/Invoices";
 import Cases from "./pages/Cases/Cases";
@@ -59,14 +59,7 @@ const router = createBrowserRouter([
         element: <AccountSettingsLayout />,
         children: [
           { path: "/account-settings/setup", element: <AccountSetup /> },
-          { path: "/account-settings/reports", element: <ZaxReporting /> },
           { path: "/account-settings/payment", element: <PaymentSetup /> },
-          { path: "/account-settings/alerts", element: <ZaxAlerts /> },
-          { path: "/account-settings/billing", element: <ZaxBilling /> },
-          {
-            path: "/account-settings/billing-summary",
-            element: <ZaxBillingSummary />,
-          },
         ],
       },
       {
