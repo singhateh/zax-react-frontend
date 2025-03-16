@@ -5,11 +5,9 @@ import {
   Calendar,
   FolderOpen,
   UserRoundCog,
-  Settings,
   House,
   BadgePoundSterling,
   ScrollText,
-  OctagonAlert,
   LayoutDashboard,
   BriefcaseMedical,
   SquareLibrary,
@@ -22,13 +20,9 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const location = useLocation();
   const menuItems = [
-    { icon: <LayoutDashboard />, text: "Dashboard", route: "/doctors" },
+    { icon: <LayoutDashboard />, text: "Dashboard", route: "/dashboard" },
     { icon: <House />, text: "Doctors", route: "/doctors" },
-    {
-      icon: <UserRoundCog />,
-      text: "Account",
-      route: "/account-settings/setup",
-    },
+
     {
       icon: <BriefcaseMedical />,
       text: "Instruct Case",
@@ -45,7 +39,7 @@ const Sidebar = () => {
       route: "/medical-records",
     },
     { icon: <Mail />, text: "General Letters", route: "/general-letters" },
-    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal" },
+    { icon: <Calendar />, text: "Zax Cal", route: "/zax-cal/setup-venue" },
     { icon: <ScrollText />, text: "Zax Reports", route: "/zax-reports" },
     { icon: <ReceiptText />, text: "Invoices", route: "/invoices" },
     {
@@ -54,11 +48,10 @@ const Sidebar = () => {
       route: "/zax-billing",
     },
     {
-      icon: <BadgePoundSterling />,
-      text: "Zax Billing Summary",
-      route: "/zax-billing-summary",
+      icon: <UserRoundCog />,
+      text: "Account",
+      route: "/account-settings/setup",
     },
-    { icon: <OctagonAlert />, text: "Zax Alerts", route: "/zax-alerts" },
   ];
 
   const activeSidebarItem = menuItems.find(
