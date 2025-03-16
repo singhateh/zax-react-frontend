@@ -1,12 +1,11 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 const SidebarItem = ({ icon, text, onClick, activeSidebarItem }) => {
   return (
     <div
       role="button"
       tabIndex={0}
-      onClick={onClick}
+      // onClick={() => setPageHeaderTitle(activeSidebarItem)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           onClick();
