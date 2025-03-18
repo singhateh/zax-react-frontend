@@ -11,7 +11,7 @@ import {
   BriefcaseMedical,
   ReceiptText,
 } from "lucide-react";
-import "../../src/Icon.css";
+import "../../styles/Icon.css";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -64,7 +64,7 @@ const Sidebar = () => {
   }, [activeSidebarItem]);
 
   return (
-    <div className="bg-[#4D55CC] text-white fixed lg:relative h-full transition-all duration-300 w-45 left-0">
+    <div className="bg-blue-900 text-white fixed lg:relative h-screen transition-all duration-300 w-40 left-0">
       <div className="bg-cyan-950 flex items-center justify-between p-4 border-b border-gray-700">
         <span className="text-xl font-bold">Zax Tech</span>
       </div>

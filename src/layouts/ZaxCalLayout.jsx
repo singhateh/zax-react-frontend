@@ -8,7 +8,7 @@ import {
   FileText,
   FileSpreadsheet,
 } from "lucide-react";
-import Tabs from "../components/Tabs";
+import Tabs from "../Global/components/Tabs";
 import { Outlet } from "react-router-dom";
 
 function ZaxCalLayout() {

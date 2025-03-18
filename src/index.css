@@ -14,6 +14,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.table-spacing {
+  border-spacing: 0 2rem; /* Vertical spacing between rows */
+}
 
 a {
   font-weight: 500;
@@ -23,14 +26,6 @@ a {
 
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -53,6 +48,29 @@ h1 {
   }
 }
 
-body {
+/* body {
   @apply bg-gray-100 text-gray-900;
+} */
+/* Overall Layout */
+.inventory-layout {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Overall Layout */
+.inventory-layout {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Page Content */
+.inventory-content {
+  flex-grow: 1;
+  /* padding: 20px; */
+  /* margin-top: 10px; */
+  padding: 15px;
 }

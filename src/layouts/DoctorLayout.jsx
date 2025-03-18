@@ -1,5 +1,5 @@
 import { useLocation, Outlet } from "react-router-dom";
-import Tabs from "../components/Tabs";
+import Tabs from "../Global/components/Tabs";
 import { Briefcase, Scale, User2Icon } from "lucide-react";
 import { useState } from "react";
 

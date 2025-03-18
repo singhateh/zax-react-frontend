@@ -8,9 +8,6 @@ function App() {
     <ContextProvider>
       <RouterProvider router={router} />
     </ContextProvider>
-    // <React.StrictMode>
-
-    // </React.StrictMode>
   );
 }
 

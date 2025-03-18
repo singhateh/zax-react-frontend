@@ -1,38 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
 import AuthLayout from "./layouts/AuthLayout";
-import Login from "./pages/Auth/Login";
-import Register from "./pages/Auth/Register";
-import Doctors from "./pages/Doctors/Doctors";
+import Login from "./Modules/Auth/Login";
+import Register from "./Modules/Auth/Register";
+import Doctors from "./Modules/Doctors/Doctors";
 import DoctorLayout from "./layouts/DoctorLayout";
-import Agencies from "./pages/Doctors/Agencies";
-import AgenciesNote from "./pages/Doctors/AgenciesNote";
-import SolicitorsDiary from "./pages/Doctors/SolicitorsDiary";
-import ForgotPassword from "./pages/Auth/ForgotPassword";
+import Agencies from "./Modules/Doctors/Agencies";
+import AgenciesNote from "./Modules/Doctors/AgenciesNote";
+import SolicitorsDiary from "./Modules/Doctors/SolicitorsDiary";
+import ForgotPassword from "./Modules/Auth/ForgotPassword";
 import GuestLayout from "./layouts/GuestLayout";
-import AccountSetup from "./pages/AccountSettings/AccountSetup";
-import PaymentSetup from "./pages/AccountSettings/PaymentSetup";
-import ZaxReporting from "./pages/ZaxBilling/ZaxReporting";
-import ZaxBilling from "./pages/ZaxBilling/ZaxBilling";
-import ZaxBillingSummary from "./pages/ZaxBilling/ZaxBilling";
-import ZaxAlerts from "./pages/ZaxBilling/ZaxAlerts";
+import AccountSetup from "./Modules/AccountSettings/AccountSetup";
+import PaymentSetup from "./Modules/AccountSettings/PaymentSetup";
+import ZaxReporting from "./Modules/ZaxBilling/ZaxReporting";
+import ZaxBilling from "./Modules/ZaxBilling/ZaxBilling";
+import ZaxBillingSummary from "./Modules/ZaxBilling/ZaxBilling";
+import ZaxAlerts from "./Modules/ZaxBilling/ZaxAlerts";
 import AccountSettingsLayout from "./layouts/AccountSettingsLayout";
 import ZaxCalLayout from "./layouts/ZaxCalLayout";
-import SetUpVenue from "./pages/ZaxCal/SetUpVenue";
-import CreateSlots from "./pages/ZaxCal/CreateSlots";
-import BookAppointments from "./pages/ZaxCal/BookAppointments";
-import Diary from "./pages/ZaxCal/Diary";
-import PrintClinicList from "./pages/ZaxCal/PrintClinicList";
-import PrintDnaList from "./pages/ZaxCal/PrintDnaList";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import InstructCase from "./pages/InstructCase/InstructCase";
-import ManageCase from "./pages/ManageCase/ManageCase";
-import MedicalRecords from "./pages/ManageCase/MedicalRecords";
-import GeneralLetters from "./pages/ManageCase/GeneralLetters";
+import SetUpVenue from "./Modules/ZaxCal/SetUpVenue";
+import CreateSlots from "./Modules/ZaxCal/CreateSlots";
+import BookAppointments from "./Modules/ZaxCal/BookAppointments";
+import Diary from "./Modules/ZaxCal/Diary";
+import PrintClinicList from "./Modules/ZaxCal/PrintClinicList";
+import PrintDnaList from "./Modules/ZaxCal/PrintDnaList";
+import Dashboard from "./Modules/Dashboard/Dashboard";
+import InstructCase from "./Modules/InstructCase/InstructCase";
+import ManageCase from "./Modules/ManageCase/ManageCase";
+import MedicalRecords from "./Modules/ManageCase/MedicalRecords";
+import GeneralLetters from "./Modules/ManageCase/GeneralLetters";
 import ManageCaseLayout from "./layouts/ManageCaseLayout";
-import ManageInvoices from "./pages/Invoices/ManageInvoices";
-import InvoiceReports from "./pages/Invoices/InvoiceReports";
-import ManageInvoicesLayout from "./layouts/ManageInvoices";
+import ManageInvoices from "./Modules/Invoices/ManageInvoices";
+import InvoiceReports from "./Modules/Invoices/InvoiceReports/InvoiceReports";
+import ManageInvoicesLayout from "./Modules/Invoices/ManageInvoices/Layouts/ManageInvoicesLayout";
 import ZaxBillingLayout from "./layouts/ZaxBillingLayout";
+import Generate from "./Modules/Invoices/ManageInvoices/pages/Generate";
+import Cancel from "./Modules/Invoices/ManageInvoices/pages/Cancel";
+import Unpaid from "./Modules/Invoices/ManageInvoices/pages/Unpaid";
+import Remittance from "./Modules/Invoices/ManageInvoices/pages/Remittance";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +45,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", // Prefix
-        element: <Dashboard />, // ! REPLACE WITH DASHBOARD LAYOUT
+        element: <Dashboard />,
         children: [
           {
             path: "/dashboard",
@@ -106,8 +110,33 @@ const router = createBrowserRouter([
         path: "/",
         element: <ManageInvoicesLayout />,
         children: [
-          { path: "/invoices/manage-invoices", element: <ManageInvoices /> },
-          { path: "/invoices/reports", element: <InvoiceReports /> },
+          {
+            path: "/invoices/manage-invoices",
+            element: <ManageInvoices />,
+            children: [
+              {
+                path: "/invoices/manage-invoices/generate",
+                element: <Generate />,
+              },
+              {
+                path: "/invoices/manage-invoices/cancel",
+                element: <Cancel />,
+              },
+              {
+                path: "/invoices/manage-invoices/unpaid",
+                element: <Unpaid />,
+              },
+              {
+                path: "/invoices/manage-invoices/remittance",
+                element: <Remittance />,
+              },
+            ],
+          },
+          {
+            path: "/invoices/reports",
+            element: <InvoiceReports />,
+            children: [],
+          },
         ],
       },
       {

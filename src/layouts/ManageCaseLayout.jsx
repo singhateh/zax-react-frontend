@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Tabs from "../components/Tabs";
+import Tabs from "../Global/components/Tabs";
 import { Briefcase, BriefcaseMedical, Mail } from "lucide-react";
 import { useState } from "react";
 

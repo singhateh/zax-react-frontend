@@ -1,19 +1,19 @@
 import React from "react";
 import { useState } from "react";
-import Tabs from "../../components/Tabs";
+import Tabs from "../../Global/components/Tabs";
 import { Outlet } from "react-router-dom";
 
 function ManageInvoices() {
-  const [activeTab, setActiveTab] = useState("Doctors");
+  const [activeTab, setActiveTab] = useState("Generate");
 
   const tabs = [
     { label: "Generate", route: "/invoices/manage-invoices/generate" },
     { label: "Cancelled Invoices", route: "/invoices/manage-invoices/cancel" },
     { label: "Account Receivable", route: "/invoices/manage-invoices/unpaid" },
-    { label: "Remittance", route: "invoices/manage-invoices/remittance" },
+    { label: "Remittance", route: "/invoices/manage-invoices/remittance" },
   ];
   return (
-    <div className="fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)]  left-40 lg:left-40 px-0 flex justify-center items-center z-20 transition-all duration-300 h-12 shadow-inner">
+    <div className="fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)]  left-40 lg:left-45 px-0  justify-center items-center z-20 transition-all duration-300  shadow-inner">
       <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <div className="w-full max-w-full mt-20">

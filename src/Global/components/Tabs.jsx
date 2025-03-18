@@ -1,5 +1,5 @@
-import { useNavigate, useLocation } from "react-router-dom";
-import { capitalize } from "../utilities/utilities";
+import { useNavigate, useLocation, NavLink } from "react-router-dom";
+import { capitalize } from "../../utilities/utilities";
 import { useEffect } from "react";
 
 const Tabs = ({ activeTab, setActiveTab, tabs }) => {
@@ -26,7 +26,12 @@ const Tabs = ({ activeTab, setActiveTab, tabs }) => {
     [activeTab];
 
   return (
-    <div className="bg-[#B5A8D5] fixed gap-4 w-[calc(100%-45px)] lg:w-[calc(100%-160px)]  left-45 lg:left-45 px-0 flex justify-center items-center z-20 transition-all duration-300 h-12 shadow-inner">
+    <div
+      className="bg-blue-600 fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)] 
+      left-40 lg:left-40 px-0 flex justify-center items-center z-20 transition-all duration-300 mt-16
+      h-12 shadow-md"
+    >
+      {" "}
       {tabs.map((tab, key) => (
         <TabButton
           key={key}
