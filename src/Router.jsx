@@ -33,8 +33,8 @@ import ManageInvoices from "./Modules/Invoices/ManageInvoices";
 import InvoiceReports from "./Modules/Invoices/InvoiceReports/InvoiceReports";
 import ManageInvoicesLayout from "./Modules/Invoices/ManageInvoices/Layouts/ManageInvoicesLayout";
 import ZaxBillingLayout from "./layouts/ZaxBillingLayout";
-import Generate from "./Modules/Invoices/ManageInvoices/pages/Generate";
-import Cancel from "./Modules/Invoices/ManageInvoices/pages/Cancel";
+import Generate from "./Modules/Invoices/ManageInvoices/Pages/Generate/Generate";
+import Cancel from "./Modules/Invoices/ManageInvoices/Pages/Cancel/Cancel";
 import Unpaid from "./Modules/Invoices/ManageInvoices/pages/Unpaid";
 import Remittance from "./Modules/Invoices/ManageInvoices/pages/Remittance";
 

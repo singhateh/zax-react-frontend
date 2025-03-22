@@ -18,16 +18,30 @@ const ManageInvoicesLayout = () => {
       route: "/invoices/reports",
     },
   ];
-
   return (
-    <div className="inventory-layout">
-      <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+    <div className="w-full h-full flex flex-col">
+      {/* Tabs Section */}
+      <div className="w-full z-20 bg-white shadow-sm">
+        <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+      </div>
 
-      <div className="w-full max-w-full mt-15">
+      {/* Content Section */}
+      <div className="flex-1 overflow-y-auto p-4 mt-7">
         <Outlet />
       </div>
     </div>
   );
 };
+
+//   return (
+//     <div className="w-full h-full flex flex-col">
+//       <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+//       <div className="flex-1 overflow-y-auto mt-15">
+//         <Outlet />
+//       </div>
+//     </div>
+//   );
+// };
 
 export default ManageInvoicesLayout;

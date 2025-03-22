@@ -7,10 +7,9 @@ const Header = ({ user, logout }) => {
 
   return (
     <div
-      className="bg-white fixed w-[calc(100%-40px)] lg:w-[calc(100%-160px)] top-0 left-40 lg:left-40 px-2 shadow-md flex justify-between 
+      className="bg-white fixed w-[calc(100%-40px)] lg:w-[calc(100%-160px)] top-0 left-40 lg:left-40 px-2 shadow-md flex justify-between
     items-center z-50 transition-all duration-300 h-15"
     >
-      {" "}
       <h2 className="page-header text-3xl font-bold">Dashboard</h2>
       <div className="flex items-center gap-6 relative">
         {/* Notifications */}

@@ -27,11 +27,12 @@ const Tabs = ({ activeTab, setActiveTab, tabs }) => {
 
   return (
     <div
-      className="bg-blue-600 fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)] 
-      left-40 lg:left-40 px-0 flex justify-center items-center z-20 transition-all duration-300 mt-16
-      h-12 shadow-md"
+      className="fixed w-[calc(100%-40px)] lg:w-[calc(100%-160px)] 
+    left-40 lg:left-40 px-4 flex justify-center items-center gap-4 
+    z-20 transition-all duration-300 mt-15 h-10
+    bg-gradient-to-r from-blue-500 to-indigo-600 shadow-xl 
+    backdrop-blur-lg bg-opacity-80 border border-white/20"
     >
-      {" "}
       {tabs.map((tab, key) => (
         <TabButton
           key={key}
@@ -49,15 +50,15 @@ export default Tabs;
 export const TabButton = ({ tab, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`py-1 px-3 text-sm rounded-md transition-all duration-200 cursor-pointer font-bold
-      ${
-        active
-          ? "bg-white text-black border-b-2 "
-          : "bg-transparent text-gray-700 hover:bg-[#4D55CC] hover:text-white"
-      }
-      flex gap-1 items-center`}
+    className={`py-2 px-4 text-sm rounded-lg transition-all duration-300 cursor-pointer font-semibold 
+    flex items-center gap-2
+    ${
+      active
+        ? "bg-white text-indigo-700 shadow-md border-b-4 border-indigo-500 scale-90"
+        : "bg-transparent text-gray-200 hover:bg-white/20 hover:text-white"
+    }`}
   >
-    <span className="text-xs">{tab.icon}</span>
+    <span className="text-base">{tab.icon}</span>
     {capitalize(tab.label)}
   </button>
 );

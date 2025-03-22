@@ -13,14 +13,30 @@ function ManageInvoices() {
     { label: "Remittance", route: "/invoices/manage-invoices/remittance" },
   ];
   return (
-    <div className="fixed gap-4 w-[calc(100%-40px)] lg:w-[calc(100%-160px)]  left-40 lg:left-45 px-0  justify-center items-center z-20 transition-all duration-300  shadow-inner">
-      <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+    <div className="flex flex-col w-full h-full">
+      {/* Tabs Section */}
+      <div className="w-full z-20 bg-white shadow-sm">
+        <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+      </div>
 
-      <div className="w-full max-w-full mt-20">
+      {/* Content Section */}
+      <div className="flex-1 overflow-y-auto p-4 mt-23">
         <Outlet />
       </div>
     </div>
   );
 }
+//   return (
+//     <div className="flex flex-col w-full h-full">
+//       <div className="w-full z-20 bg-white shadow-sm">
+//         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+//       </div>
+
+//       <div className="flex-1 overflow-y-auto p-4">
+//         <Outlet />
+//       </div>
+//     </div>
+//   );
+// }
 
 export default ManageInvoices;

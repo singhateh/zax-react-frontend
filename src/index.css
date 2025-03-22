@@ -48,29 +48,6 @@ h1 {
   }
 }
 
-/* body {
+body {
   @apply bg-gray-100 text-gray-900;
-} */
-/* Overall Layout */
-.inventory-layout {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  position: relative;
-}
-
-/* Overall Layout */
-.inventory-layout {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  position: relative;
-}
-
-/* Page Content */
-.inventory-content {
-  flex-grow: 1;
-  /* padding: 20px; */
-  /* margin-top: 10px; */
-  padding: 15px;
 }

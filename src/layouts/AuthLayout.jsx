@@ -22,7 +22,7 @@ export default function AuthLayout() {
 
   return (
     <div className="layout">
-      <div className="">
+      <div className="sidebar">
         <Sidebar />
       </div>
       <div className="main">
