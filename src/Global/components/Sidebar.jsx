@@ -36,7 +36,12 @@ const Sidebar = () => {
     {
       icon: <ReceiptText />,
       text: "Invoices",
-      route: "/invoices/manage-invoices",
+      route: "/invoices/manage-invoices/generate",
+    },
+    {
+      icon: <ReceiptText />,
+      text: "Invoice Reports",
+      route: "/reports/invoices",
     },
     {
       icon: <BadgePoundSterling />,

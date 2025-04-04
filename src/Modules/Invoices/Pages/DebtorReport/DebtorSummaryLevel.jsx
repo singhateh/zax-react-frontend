@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import allData from "./allData";
+import allData from "../Cancel/allData";
 import useSearchFilters from "../../hooks/useSearchFilters";
 
 import InvoiceSearchCard from "../../../Components/InvoiceSearchCard";
@@ -10,7 +10,7 @@ import {
 } from "../../../../../Global/components/Inputs";
 import DataTable from "../../../Components/DataTable";
 
-function Cancel() {
+function DebtorSummaryLevel() {
   const {
     filters,
     filteredData,
@@ -32,7 +32,6 @@ function Cancel() {
   }, []);
 
   const SearchCancelledInvoice = () => {
-    console.log(filters);
     setLoadingFilteredData(true);
     // Check if at least one filter is filled
     const hasFilters = Object.values(filters).some(
@@ -78,12 +77,10 @@ function Cancel() {
     {
       label: "Gross (£)",
       key: "gross",
-      render: (item) => `£${item.gross.toFixed(2)}`,
     },
     {
       label: "Balance (£)",
       key: "balance",
-      render: (item) => `£${item.balance.toFixed(2)}`,
     },
     { label: "Due Date", key: "dueDate" },
     { label: "Status", key: "status" },
@@ -111,12 +108,23 @@ function Cancel() {
             onSearch={SearchCancelledInvoice}
             onReset={ResetFilter}
           />
-
           {/* select all button  */}
-          <div className="flex flex-row gap-6 mt-2 items-center">
+          <div className="flex flex-row gap-2 mt-2 items-center">
             <h3>Select All: </h3>
             <CheckboxInput />
-            <IconButton text="Cancelled" className="rounded-[8px] p-1" />
+            <IconButton text="Open" className="rounded-[8px] p-1 bg-gray-500" />
+            <IconButton
+              text="Paid"
+              className="rounded-[8px] p-1 bg-green-500"
+            />
+            <IconButton
+              text="Part Paid"
+              className="rounded-[8px] p-1 bg-pink-300"
+            />
+            <IconButton
+              text="Cancelled"
+              className="rounded-[8px] p-1 bg-red-400"
+            />
           </div>
           {/* Display Results */}
 
@@ -133,4 +141,4 @@ function Cancel() {
   );
 }
 
-export default Cancel;
+export default DebtorSummaryLevel;

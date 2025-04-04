@@ -111,7 +111,7 @@ export const SearchInput = ({
 };
 
 export const CheckboxInput = ({
-  checked,
+  checked = false,
   onChange,
   className = "",
   required = false,
@@ -120,7 +120,7 @@ export const CheckboxInput = ({
     <div className={`flex items-center space-x-2 ${className}`}>
       <input
         type="checkbox"
-        checked={checked}
+        checked={Boolean(checked)}
         onChange={onChange}
         required={required}
         className="w-6 h-6 border border-gray-400 rounded cursor-pointer transition-all 
@@ -148,7 +148,7 @@ export const IconButton = ({
         ${
           disabled
             ? "bg-gray-400 cursor-not-allowed"
-            : "bg-blue-600 hover:bg-blue-700 active:scale-95"
+            : "bg-blue-600 hover:bg-blue-400 active:scale-95"
         }
         ${className}`}
     >

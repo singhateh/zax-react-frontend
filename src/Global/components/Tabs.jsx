@@ -54,7 +54,7 @@ export const TabButton = ({ tab, active, onClick }) => (
     flex items-center gap-2
     ${
       active
-        ? "bg-white text-indigo-700 shadow-md border-b-4 border-indigo-500 scale-90"
+        ? "bg-white text-indigo-700 shadow-md border-b-4 border-indigo-500 scale-90 border-b-[#ffadff]"
         : "bg-transparent text-gray-200 hover:bg-white/20 hover:text-white"
     }`}
   >

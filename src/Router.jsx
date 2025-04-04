@@ -35,8 +35,21 @@ import ManageInvoicesLayout from "./Modules/Invoices/ManageInvoices/Layouts/Mana
 import ZaxBillingLayout from "./layouts/ZaxBillingLayout";
 import Generate from "./Modules/Invoices/ManageInvoices/Pages/Generate/Generate";
 import Cancel from "./Modules/Invoices/ManageInvoices/Pages/Cancel/Cancel";
-import Unpaid from "./Modules/Invoices/ManageInvoices/pages/Unpaid";
 import Remittance from "./Modules/Invoices/ManageInvoices/pages/Remittance";
+import AccountReceivableLayout from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/AccountReceivableLayout";
+import Open from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/Open";
+import Paid from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/Paid";
+import PartPaid from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/PartPaid";
+import Find from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/Find";
+import OverDue from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/OverDue";
+import Cancelled from "./Modules/Invoices/ManageInvoices/Pages/AccountReceivable/Cancelled";
+import RemittanceLayout from "./Modules/Invoices/ManageInvoices/Pages/Remittance/RemittanceLayout";
+import InvoiceLevelStatement from "./Modules/Invoices/ManageInvoices/Pages/Remittance/InvoiceLevelStatement";
+import OpenInvoice from "./Modules/Invoices/ManageInvoices/Pages/Remittance/OpenInvoice";
+import SummaryLevelStatments from "./Modules/Invoices/ManageInvoices/Pages/Remittance/SummaryLevelStatments";
+import InvoiceReportLayout from "./layouts/InvoiceReportLayout";
+import DebtorReportPage from "./Modules/Invoices/Pages/DebtorReport/DebtorReportPage";
+import InvoiceListReportPage from "./Modules/Invoices/Pages/InvoiceListReport/InvoiceListReportPage";
 
 const router = createBrowserRouter([
   {
@@ -123,19 +136,70 @@ const router = createBrowserRouter([
                 element: <Cancel />,
               },
               {
-                path: "/invoices/manage-invoices/unpaid",
-                element: <Unpaid />,
+                path: "/invoices/manage-invoices/account_receivable",
+                element: <AccountReceivableLayout />,
+                children: [
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/unpaid_invoice",
+                    element: <Open />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/paid_invoice",
+                    element: <Paid />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/find_invoice",
+                    element: <Find />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/overdue_invoice",
+                    element: <OverDue />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/cancelled_invoice",
+                    element: <Cancelled />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/account_receivable/partially_paid_invoice",
+                    element: <PartPaid />,
+                  },
+                ],
               },
               {
                 path: "/invoices/manage-invoices/remittance",
-                element: <Remittance />,
+                element: <RemittanceLayout />,
+                children: [
+                  {
+                    path: "/invoices/manage-invoices/remittance/open",
+                    element: <InvoiceLevelStatement />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/remittance/summary_level_statement",
+                    element: <OpenInvoice />,
+                  },
+                  {
+                    path: "/invoices/manage-invoices/remittance/invoice_level_statement",
+                    element: <SummaryLevelStatments />,
+                  },
+                ],
               },
             ],
           },
           {
-            path: "/invoices/reports",
-            element: <InvoiceReports />,
-            children: [],
+            path: "/reports/invoices",
+            element: <InvoiceReportLayout />,
+            children: [
+              {
+                path: "/reports/invoices/invoice_list_report",
+                element: <InvoiceListReportPage />,
+                children: [],
+              },
+              {
+                path: "/reports/invoices/debtor_report",
+                element: <DebtorReportPage />,
+                children: [],
+              },
+            ],
           },
         ],
       },

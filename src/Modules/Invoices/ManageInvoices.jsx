@@ -9,8 +9,11 @@ function ManageInvoices() {
   const tabs = [
     { label: "Generate", route: "/invoices/manage-invoices/generate" },
     { label: "Cancelled Invoices", route: "/invoices/manage-invoices/cancel" },
-    { label: "Account Receivable", route: "/invoices/manage-invoices/unpaid" },
-    { label: "Remittance", route: "/invoices/manage-invoices/remittance" },
+    {
+      label: "Account Receivable",
+      route: "/invoices/manage-invoices/account_receivable/unpaid_invoice",
+    },
+    { label: "Remittance", route: "/invoices/manage-invoices/remittance/open" },
   ];
   return (
     <div className="flex flex-col w-full h-full">
@@ -26,17 +29,5 @@ function ManageInvoices() {
     </div>
   );
 }
-//   return (
-//     <div className="flex flex-col w-full h-full">
-//       <div className="w-full z-20 bg-white shadow-sm">
-//         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-//       </div>
-
-//       <div className="flex-1 overflow-y-auto p-4">
-//         <Outlet />
-//       </div>
-//     </div>
-//   );
-// }
 
 export default ManageInvoices;
