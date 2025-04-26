@@ -1,0 +1,136 @@
+/* Modal Custom Styles */
+.custom-modal-class {
+    background-color: #fff;
+    /* padding: 20px; */
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-modal {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.appointment-info {
+    margin-top: 10px;
+}
+
+.appointment-info p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.appointment-info strong {
+    color: #333;
+}
+
+.badge {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+}
+
+.badge-default {
+    background-color: #6c757d;
+}
+
+.badge-success {
+    background-color: #28a745;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+.custom-confirm-btn {
+    background-color: #3085d6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-confirm-btn:hover {
+    background-color: #2c7cbf;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-modal-class {
+        padding: 5px;
+    }
+
+    .appointment-info p {
+        font-size: 13px;
+    }
+
+    .custom-confirm-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+
+/* Information Rows */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.label {
+    font-weight: bold;
+    color: #007bff;
+    /* Blue for label */
+}
+
+.value {
+    color: #555;
+}
+
+/* Status Styling */
+.status .value {
+    color: #fff;
+    background-color: #28a745;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Confirm Button Styling */
+.custom-confirm-btn {
+    background-color: #007bff;
+    /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .appointment-modal {
+        font-size: 12px;
+    }
+
+    .custom-confirm-btn {
+        padding: 8px 16px;
+    }
+
+    .info-row {
+        font-size: 12px;
+    }
+}

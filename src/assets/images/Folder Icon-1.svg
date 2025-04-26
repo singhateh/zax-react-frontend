@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="97.918" height="94.382" viewBox="0 0 97.918 94.382">
+  <g id="Folder_Icon" data-name="Folder Icon" transform="translate(0 -3)">
+    <path id="Path_31" data-name="Path 31" d="M29.04,3H5.451A4.744,4.744,0,0,0,1,7.967v19.87H94.467V17.9a4.744,4.744,0,0,0-4.451-4.967H46.4A8.025,8.025,0,0,1,40.835,10.7L34.6,5.235A8.025,8.025,0,0,0,29.04,3Z" transform="translate(1.225)" fill="#f19920"/>
+    <path id="Path_32" data-name="Path 32" d="M97.918,15.484V77.577a4.744,4.744,0,0,1-4.451,4.967H4.451A4.744,4.744,0,0,1,0,77.577V15.484A2.234,2.234,0,0,1,2.225,13H95.692A2.234,2.234,0,0,1,97.918,15.484Z" transform="translate(0 14.837)" fill="#ffcb5b"/>
+    <path id="Path_33" data-name="Path 33" d="M87.565,18.935V11.484A2.234,2.234,0,0,0,85.34,9H5.225A2.234,2.234,0,0,0,3,11.484v7.451Z" transform="translate(3.676 8.902)" fill="#fff"/>
+    <path id="Path_34" data-name="Path 34" d="M91.016,26.922V74.61H4.225a2.5,2.5,0,0,0,0,4.967H91.016a4.744,4.744,0,0,0,4.451-4.967V15A17.754,17.754,0,0,0,91.016,26.922Z" transform="translate(2.451 17.805)" fill="#f7b84e"/>
+    <path id="Path_35" data-name="Path 35" d="M6.341,15.484A7.389,7.389,0,0,1,1,13H67.762a7.389,7.389,0,0,1-5.341,2.484Z" transform="translate(1.225 14.837)" fill="#ffdb6f"/>
+    <path id="Path_36" data-name="Path 36" d="M90.016,14.484h4.451A4.5,4.5,0,0,0,90.906,12h-.89Zm-84.565,0H1A4.5,4.5,0,0,1,4.561,12h.89Z" transform="translate(1.225 13.354)" fill="#e78825"/>
+    <path id="Path_37" data-name="Path 37" d="M3,12H87.565v2.484H3Z" transform="translate(3.676 13.354)" fill="#d1d9e1"/>
+    <path id="Path_38" data-name="Path 38" d="M16.113,24h28.93a1.249,1.249,0,0,1,0,2.484H16.113a1.249,1.249,0,0,1,0-2.484Zm4.451,7.451H40.592a1.249,1.249,0,0,1,0,2.484H20.563a1.249,1.249,0,0,1,0-2.484Z" transform="translate(18.381 31.158)" fill="#f19920"/>
+  </g>
+</svg>

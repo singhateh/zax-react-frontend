@@ -1,0 +1,242 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Container */
+.modal-container {
+    background: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 500px;
+    /* Default width set to 500px */
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-width 0.3s ease, height 0.3s ease;
+}
+
+/* .modal-container.expanded {
+    max-width: 1000px;
+    height: auto;
+}
+
+.modal-container.restored {
+    max-width: 80%;
+} */
+
+/* Expanded and restored states */
+.modal-container.expanded {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-container.restored {
+    width: auto;
+}
+
+.modal-container.hidden {
+    display: none;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    display: block;
+    padding: 20px;
+}
+
+.modal-actions {
+    padding: 8px 16px;
+}
+
+.modal-actions button {
+    padding: 8px 16px;
+    margin-left: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.btn-close {
+    background-color: #dc3545;
+}
+
+.btn-close:hover {
+    background-color: #c82333;
+}
+
+/* Minimize and Maximize Buttons */
+.btn-minimize,
+.btn-expand {
+    background-color: #6c757d;
+}
+
+.btn-minimize:hover,
+.btn-expand:hover {
+    background-color: #5a6268;
+}
+
+/* Modal Body */
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+/* Custom Scrollbar Styles */
+.modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f1f1f1;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/* Minimized Modal */
+.modal-minimized {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: auto;
+    max-width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+
+.modal-minimized .modal-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.modal-minimized .modal-actions button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.modal-minimized .modal-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal container */
+.modal-container {
+    transition: all 0.3s ease-in-out;
+    width: 90vw;
+    height: 90vh;
+}
+
+/* Minimized modal styling */
+.modal-minimized {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .modal-container {
+        width: 95vw;
+        /* More responsive width */
+        height: 80vh;
+        /* Height adjustment */
+    }
+
+    /* Reduce padding and margins for small devices */
+    .modal-header,
+    .modal-footer {
+        padding: 10px;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+        /* Smaller title for small screens */
+    }
+
+    .btn-minimize,
+    .btn-expand,
+    .btn-close {
+        font-size: 1rem;
+        /* Smaller button sizes */
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-container {
+        width: 100vw;
+        /* Full width for very small screens */
+        height: 70vh;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+}

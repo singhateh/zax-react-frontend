@@ -1,0 +1,1106 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #EEEEEE 0%, #DBE0E2 52%, #82A0AB 81%, #02445B 100%) !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border: none;
+    opacity: 1;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent linear-gradient(180deg, #002A3D 0%, #4B51563D 57%, #5C5C5C00 100%) 0% 0% no-repeat padding-box;
+    border-radius: 55px !important;
+    opacity: 1;
+    width: 100px;
+    height: 100vh;
+    margin-top: 2rem;
+}
+
+.login-content img {
+    display: block;
+    margin: 0 auto;
+    font: normal normal normal 76px/91px Square721 Ex BT;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.login-logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    width: 341px;
+    height: 100px;
+}
+
+.login-paper-svg {
+    width: 170px;
+    height: 130px;
+    margin-top: 20px;
+}
+
+.login-star-svg {
+    width: 170px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.login-input-container {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 0.5rem;
+}
+
+.login-inputs {
+    background: #ECECEC !important;
+    box-shadow: inset 0px 3px 6px #00000029, 6px 6px 12px #00000029;
+    border: 1px solid #ccc;
+    border-radius: 49px !important;
+    opacity: 1;
+    padding-left: 80px !important;
+    outline: none;
+    width: 348px !important;
+    height: 71px !important;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ABABAB;
+    font-size: 22px;
+
+}
+
+.login-inputs:focus {
+    outline: none;
+}
+
+.login-label {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 26px;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group1 {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group1 img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 35px;
+    color: #888;
+    font-size: 20px;
+}
+
+.login-remember-forget-passowrd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-svg {
+    width: 653px;
+    height: 300px;
+}
+
+/* Container for the custom switch */
+.custom-login-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+/* Hide the default checkbox */
+.custom-login-control-input {
+    display: none;
+}
+
+/* Custom label styles */
+.custom-login-control-label {
+    position: relative;
+    padding-left: 55px;
+    cursor: pointer;
+    user-select: none;
+    color: #000000;
+}
+
+/* Create the custom switch slider */
+.custom-login-control-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 44px;
+    background-color: #888585;
+    /* Inactive color */
+    border-radius: 15px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Change the slider background and transform when checked */
+.custom-login-control-input:checked+.custom-login-control-label::before {
+    background-color: #002A3D;
+    /* Active color */
+}
+
+/* Ensure the switch is displayed correctly */
+.custom-login-control-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+/* Move the inner circle when checked */
+.custom-login-control-input:checked+.custom-login-control-label::after {
+    transform: translate(24px, -50%);
+}
+
+.forgot-password {
+    font-size: 0.8em;
+    color: #000000;
+    text-decoration: none;
+    width: 195px;
+    height: 33px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.forgot-password:hover {
+    font-size: 0.8em;
+    color: #000000;
+    text-decoration: none;
+}
+
+.login-buttons {
+    width: 70%;
+    background: #EDEDEE;
+    font: normal normal bold 50px/50px Helvetica;
+    letter-spacing: 0px;
+    color: #002A3D;
+    opacity: 1;
+    box-shadow: inset 0px 3px 6px #00000029, 6px 6px 12px #00000029;
+    border-radius: 55px !important;
+    border: 1px solid #EDEDEE;
+    width: 353px;
+    height: 69px;
+    background: #EDEDEE 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.login-button-container{
+    display: flex;
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.login-buttons:focus,
+.login-buttons:hover {
+    background-color: #EDEDEE;
+    outline: none;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.login-image {
+    background-size: contain;
+    top: 310px;
+    left: 1016px;
+    width: 713px;
+    height: 186px;
+    opacity: 1;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.company-name {
+    margin-bottom: 1rem;
+    top: 165px;
+    left: 1080px;
+    width: 675px;
+    height: 132px;
+    text-align: center;
+    font: normal normal normal 111px/132px Square721 Ex BT;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.bottom-text {
+    color: #000;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Main right section with images */
+.main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    position: relative;
+}
+
+/* Top image, fixed to the top of the main-right */
+.left-top {
+    position: absolute;
+    top: 0;
+    margin-bottom: 20px;
+}
+
+/* Bottom image, centered below the top image */
+.left-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width: 575.98px) {
+    .login-container {
+        padding: 0;
+        height: auto;
+        border: none;
+        border-radius: 55px;
+    }
+
+    .login-content {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        border-radius: 55px;
+    }
+
+    .login-content img {
+        font-size: 60px;
+        line-height: 60px;
+        margin: auto;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .login-image {
+        height: auto;
+    }
+
+    .company-name {
+        font-size: 50px;
+        line-height: 75px;
+        padding: 1rem 2rem;
+    }
+
+    .bottom-text {
+        padding: 0 2rem;
+    }
+
+    .login-remember-forget-passowrd {
+        display: block;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .custom-switch {
+        margin-bottom: 1rem;
+    }
+
+    .forgot-password {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .login-container {
+        padding: 0;
+        height: auto;
+        border: none;
+    }
+
+    .login-content {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .login-content h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .login-input-container {
+        padding: 20px;
+    }
+
+    .login-buttons {
+        width: 300px;
+        height: 50px;
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login-container {
+        flex-direction: row;
+    }
+
+    .login-content {
+        width: 40%;
+    }
+
+    .login-svg {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .login-container {
+        flex-direction: row;
+    }
+
+    .login-content {
+        width: 50%;
+    }
+
+    .company-name {
+        font-size: 90px;
+    }
+
+    .login-input-container {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .login-container {
+        flex-direction: row;
+    }
+
+    .login-content {
+        width: 50%;
+    }
+}
+
+/* Form Group Container */
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Icon Inside Input */
+.input-icon {
+    position: absolute;
+    left: 30px; /* Adjust spacing as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 29px;
+    fill: #888; /* Default color for the icon */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 575.98px) {
+    body,
+    html {
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    .login-container {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .login-content {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        margin: auto;
+    }
+
+    .company-name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .login-buttons {
+        width: 80%;
+        margin: auto;
+        height: auto;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .login-buttons:hover {
+        cursor: pointer;
+    }
+
+    .right-section {
+        display: none;
+    }
+}
+
+/* Input error styles */
+.error {
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+
+
+
+.page-content {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border: none;
+    opacity: 1;
+}
+
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent linear-gradient(180deg, #002A3D 0%, #4B51563D 57%, #5C5C5C00 100%) 0% 0% no-repeat padding-box;
+    border-radius: 55px !important;
+    opacity: 1;
+    width: 644px !important;
+    height: 100vh;
+    margin-top: 2rem;
+}
+
+
+.login-content img {
+    display: block;
+    margin: 0 auto;
+    font: normal normal normal 76px/91px Square721 Ex BT;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+.login-logo {
+    width: 341px;
+    height: 170px;
+    margin-bottom: 20px;
+}
+
+.login-paper-svg {
+    width: 256px;
+    height: 261px,
+}
+
+.login-star-svg {
+    width: 173px;
+    height: 173px,
+}
+
+
+.login-input-container {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 0.5rem;
+}
+
+.login-inputs {
+    background: #ECECEC;
+    box-shadow: inset 0px 3px 6px #00000029, 6px 6px 12px #00000029;
+    border-radius: 49px !important;
+    opacity: 1;
+    padding-left: 80px;
+    outline: none;
+    width: 548px;
+    height: 71px;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ABABAB;
+    font-size: 22px;
+}
+
+.login-inputs:focus {
+    outline: none;
+}
+
+.login-label {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 26px;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group1 {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group1 img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 35px;
+    color: #888;
+    font-size: 20px;
+}
+
+.login-remember-forget-passowrd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 40px; */
+}
+
+
+.login-svg {
+    width: 653px;
+    height: 476px;
+}
+
+
+
+/* Container for the custom switch */
+.custom-login-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+/* Hide the default checkbox */
+.custom-login-control-input {
+    display: none;
+}
+
+/* Custom label styles */
+.custom-login-control-label {
+    position: relative;
+    padding-left: 55px;
+    cursor: pointer;
+    user-select: none;
+    color: #000000;
+}
+
+/* Create the custom switch slider */
+.custom-login-control-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 44px;
+    background-color: #888585;
+    /* Inactive color */
+    border-radius: 15px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Change the slider background and transform when checked */
+.custom-login-control-input:checked+.custom-login-control-label::before {
+    background-color: #002A3D;
+    /* Active color */
+}
+
+/* Ensure the switch is displayed correctly */
+.custom-login-control-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+/* Move the inner circle when checked */
+.custom-login-control-input:checked+.custom-login-control-label::after {
+    transform: translate(24px, -50%);
+}
+
+
+
+
+.forgot-password {
+    font-size: 0.8em;
+    color: #000000;
+    text-decoration: none;
+    width: 195px;
+    height: 33px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.forgot-password:hover {
+    font-size: 0.8em;
+    color: #000000;
+    text-decoration: none;
+}
+
+.login-buttons {
+    /* padding: 2px; */
+    width: 70%;
+    text-align: center;
+    background: #EDEDEE;
+    font: normal normal bold 50px/50px Helvetica;
+    letter-spacing: 0px;
+    color: #002A3D;
+    opacity: 1;
+    box-shadow: inset 0px 3px 6px #00000029, 6px 6px 12px #00000029;
+    border-radius: 55px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #EDEDEE;
+
+    width: 353px;
+    height: 69px;
+    background: #EDEDEE 0% 0% no-repeat padding-box;
+    opacity: 1;
+
+}
+
+.login-buttons:focus,
+.login-buttons:hover {
+    background-color: #EDEDEE;
+    outline: none;
+}
+
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+
+.company-name {
+    margin-bottom: 1rem;
+    top: 165px;
+    left: 1080px;
+    width: 675px;
+    height: 132px;
+    text-align: left;
+    font: normal normal normal 111px/132px Square721 Ex BT;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.bottom-text {
+    color: #000;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Main right section with images */
+.main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center images horizontally */
+    width: 30%;
+    /* Adjust as needed */
+    position: relative;
+    /* For absolute positioning of child elements */
+}
+
+/* Top image, fixed to the top of the main-right */
+.left-top {
+    position: absolute;
+    /* Position absolutely within .main-right */
+    top: 0;
+    /* Align to the top */
+    margin-bottom: 20px;
+    /* Spacing below .left-top */
+}
+
+/* Bottom image, centered below the top image */
+.left-bottom {
+    position: absolute;
+    /* Position absolutely within .main-right */
+    bottom: 0;
+    /* Align to the bottom */
+    margin-bottom: 0;
+    /* Remove any additional spacing at the bottom */
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width: 575.98px) {
+    .login-container {
+        padding: 0;
+        height: auto;
+        border: none;
+        border-radius: 55px;
+    }
+
+    .login-content {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        border-radius: 55px;
+    }
+
+    .login-content img {
+        font-size: 60px;
+        line-height: 60px;
+        margin: auto;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .login-image {
+        height: auto;
+    }
+
+    .company-name {
+        font-size: 50px;
+        line-height: 75px;
+        padding: 1rem 2rem;
+    }
+
+    .bottom-text {
+        padding: 0 2rem;
+    }
+
+    .login-remember-forget-passowrd {
+        display: block;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .custom-switch {
+        margin-bottom: 1rem;
+    }
+
+    .forgot-password {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .login-container {
+        padding: 0;
+        height: auto;
+        border: none;
+    }
+
+    .login-content {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .login-content h2 {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .login-image {
+        height: auto;
+    }
+
+    .company-name {
+        font-size: 60px;
+        line-height: 90px;
+        padding: 1.5rem 3rem;
+    }
+
+    .bottom-text {
+        padding: 0 3rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .login-container {
+        flex-direction: row;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    .login-remember-forget-passowrd {
+        margin-top: 30px;
+        /* margin-bottom: 100px; */
+    }
+
+    .login-content {
+        width: 50%;
+        padding: 20px;
+    }
+
+    .login-content h2 {
+        font: normal normal normal 60px/91px Square721 Ex BT;
+    }
+
+    .login-input-container {
+        margin-bottom: 0.5rem;
+    }
+
+    .right-section {
+        width: 50%;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        margin-top: 2rem;
+    }
+
+    .login-image {
+        height: 30vh;
+    }
+
+    .company-name {
+        text-align: left;
+        font: normal normal normal 80px/132px Square721 Ex BT;
+        width: 675px;
+        height: 132px;
+        text-align: left;
+        font: normal normal normal 111px/132px Square721 Ex BT;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+
+    .bottom-text {
+        text-align: left;
+        padding: 0 2rem;
+        padding-right: 0px;
+        color: white;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .login-container {
+        padding-left: 40rem;
+        /* padding-right: 10rem; */
+    }
+
+    .login-content h2 {
+        margin-bottom: 1rem;
+    }
+
+    .login-remember-forget-passowrd {
+        /* margin-bottom: 0px; */
+    }
+
+    .login-buttons {
+        font: normal normal bold 30px / 60px Helvetica;
+        padding: 0.1rem;
+        /* margin-top: 5rem; */
+    }
+
+    .login-content {
+        width: 30%;
+        /* margin-top: 4rem; */
+    }
+
+    .right-section {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .login-container {
+        /* height: 100vh; */
+        flex-direction: row;
+        padding-left: 1rem;
+        padding-right: 5rem;
+        border: none;
+    }
+
+    .login-content {
+        width: 30%;
+        margin-right: 1rem;
+    }
+
+
+    .login-remember-forget-passowrd {
+        margin-top: 10px;
+        /* margin-bottom: 60px; */
+    }
+
+    .login-buttons {
+        font: normal normal bold 50px / 60px Helvetica;
+    }
+
+    .right-section {
+        width: 70%;
+    }
+
+    .company-name {
+        padding-left: 5rem;
+        font: normal normal normal 111px/132px Square721 Ex BT;
+    }
+
+
+}
+
+
+/* My Laptop Screen */
+
+@media only screen and (max-width: 1477px) {
+
+    .page-content {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .login-content {
+        width: 30%;
+        margin-right: 1rem;
+        /* width: 444px !important; */
+        display: inline;
+    }
+
+    .login-logo {
+        width: 200px;
+        height: 100px !important;
+    }
+
+    .login-paper-svg {
+        width: 180px;
+        height: 261px,
+    }
+
+    .login-star-svg {
+        width: 120px;
+        height: 120px,
+    }
+
+    .login-input-container {
+        margin: 0;
+    }
+
+    .login-inputs {
+        width: 350px;
+        height: 61px;
+        font-size: 18px;
+    }
+
+    .login-svg {
+        width: 613px;
+        height: 326px;
+    }
+
+    .bottom-text {
+        padding: 0 5rem;
+        margin-top: 10px;
+    }
+
+    .custom-login-control-label {
+        padding-left: 48px;
+        font-size: 13;
+        margin-top: -2px;
+    }
+
+
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.169" height="25.511" viewBox="0 0 24.169 25.511">
+  <g id="Dectivate_2FA_Icon" data-name="Dectivate 2FA Icon" transform="translate(-32.697 -18.787)">
+    <path id="Path_141" data-name="Path 141" d="M51.53,37h3.385a1.451,1.451,0,0,0,1.451-1.451V20.738a1.451,1.451,0,0,0-1.451-1.451H34.648A1.451,1.451,0,0,0,33.2,20.738V35.553A1.451,1.451,0,0,0,34.648,37h3.413" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="0.509" cy="0.509" r="0.509" transform="translate(34.794 20.705)" fill="none"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="0.509" cy="0.509" r="0.509" transform="translate(36.527 20.705)" fill="none"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="0.509" cy="0.509" r="0.509" transform="translate(38.261 20.705)" fill="none"/>
+    <line id="Line_36" data-name="Line 36" x2="19.489" transform="translate(35.027 23.049)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_145" data-name="Group 145" transform="translate(40.14 25.68)">
+      <path id="Path_142" data-name="Path 142" d="M177.08,160.154a1.186,1.186,0,0,1-1.186,1.186h-6.912a1.186,1.186,0,0,1-1.186-1.186V144.408a1.186,1.186,0,0,1,1.186-1.186h6.95a1.147,1.147,0,0,1,1.147,1.147Z" transform="translate(-167.797 -143.222)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_37" data-name="Line 37" x2="0.739" transform="translate(4.272 16.589)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_38" data-name="Line 38" x2="9.258" transform="translate(0 15.213)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="Group_146" data-name="Group 146" transform="translate(42.25 30.713)">
+      <path id="Path_143" data-name="Path 143" d="M213.775,244.132v-2.691l-2.531-.641-2.531.641v2.691a2.3,2.3,0,0,0,.949,1.863l1.582,1.148,1.582-1.148A2.3,2.3,0,0,0,213.775,244.132Z" transform="translate(-208.713 -240.8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_144" data-name="Path 144" d="M239.455,284.776l.6.6,1.45-1.45" transform="translate(-237.869 -281.704)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

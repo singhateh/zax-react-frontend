@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="31" viewBox="0 0 49 31">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_251" data-name="Rectangle 251" width="49" height="31" rx="2" transform="translate(0 -0.289)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="50" height="40" transform="translate(1427 1547)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Uae_Flag_reclangle" transform="translate(0 0.289)" clip-path="url(#clip-path)">
+    <g id="UAE-Rect" transform="translate(-1427 -1551.289)" clip-path="url(#clip-path-2)">
+      <g id="_017532f4f2f664148d28be42681ce759" data-name="017532f4f2f664148d28be42681ce759" transform="translate(1408.087 1536.251)">
+        <path id="Path_3982" data-name="Path 3982" d="M74.811,16.667c-19.571.017-37.005,8.227-43.529,20.5h87.064C111.822,24.893,94.384,16.682,74.811,16.667Z" transform="translate(-28.579 -11.667)" fill="#090"/>
+        <path id="Path_3983" data-name="Path 3983" d="M19.37,183.333a20.81,20.81,0,0,0-.007,20.5h87.064a20.81,20.81,0,0,0,.007-20.5H19.37Z" transform="translate(-16.667 -159.585)" fill="#fff"/>
+        <path id="Path_3984" data-name="Path 3984" d="M31.246,350c6.524,12.274,23.962,20.485,43.535,20.5,19.571-.016,37.006-8.227,43.529-20.5Z" transform="translate(-28.55 -314.001)" fill="#222"/>
+        <path id="Path_3985" data-name="Path 3985" d="M47.488,31.246C29.034,35.585,16.689,47.184,16.667,60.2c.025,13.016,12.37,24.612,30.821,28.951Z" transform="translate(-16.667 -29.453)" fill="red"/>
+      </g>
+    </g>
+  </g>
+</svg>
