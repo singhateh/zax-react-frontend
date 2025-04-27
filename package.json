@@ -62,5 +62,5 @@
     "vite": "^6.2.0",
     "vite-plugin-pwa": "^1.0.0"
   },
-  "homepage": "https://singhateh.github.io/zax-react"
+  "homepage": "https://singhateh.github.io/zax-react-frontend"
 }
