@@ -2,7 +2,7 @@ import Appointments from "./ZaxCal/Appointments";
 
 export default function DoctorDashboard() {
     return (
-        <div className1="md:p-0 lg:p-4 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+        <div>
             {/* Stats Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {[

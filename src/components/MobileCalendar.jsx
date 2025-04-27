@@ -77,7 +77,7 @@ const MobileCalendar = ({ events, loading, error, fetchAppointments, setModalTit
     );
 
     return (
-        <div className="bg-white rounded-t-3xl shadow-xl overflow-hidden mt-25">
+        <div className="overflow-hidden mt-25">
             {error ? (
                 <div className="p-6 text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-50 mb-3">
@@ -95,7 +95,7 @@ const MobileCalendar = ({ events, loading, error, fetchAppointments, setModalTit
             ) : (
                 <div className="w-full relative">
                     {loading && (
-                        <div className="absolute inset-0 z-50 bg-white bg-opacity-90 flex items-center justify-center">
+                        <div className="absolute inset-0 z-50 bg-gray-100 bg-opacity-90 flex items-center justify-center">
                             <div className="w-full p-4 space-y-4 animate-pulse">
                                 {/* Skeleton Header */}
                                 <div className="flex justify-between items-center p-3">

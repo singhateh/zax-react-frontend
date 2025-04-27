@@ -78,7 +78,7 @@ const Sidebar = ({ isCollapsed, isOpen, isMobile, doctor, logout, toggleSidebar 
                     h-screen 
                     transition-all duration-300 ease-in-out
                     ${isCollapsed ? 'w-16' : 'w-40'} 
-                    ${isMobile ? 'z-30 fixed top-0 left-0' : 'relative z-60'}
+                    ${isMobile ? 'z-60 fixed top-0 left-0' : 'relative z-60'}
                     shadow-lg
                     flex flex-col
                 `}>

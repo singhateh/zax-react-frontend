@@ -7,11 +7,12 @@ import {
     Eye,
     CalendarPlus,
 } from "lucide-react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, useOutletContext } from "react-router-dom";
 
 function InstructCaseLayout() {
     const location = useLocation();
     const navigate = useNavigate();
+    const { isCollapsed, isMobile } = useOutletContext();
 
     const getTitleFromPath = () => {
         const pathSegments = location.pathname.split('/').filter(Boolean);
@@ -86,34 +87,39 @@ function InstructCaseLayout() {
 
     return (
 
-        <div className="inventory-layout">
-            {/* Header/Navbar */}
-            <div className="bg-blue-600 sticky flex top-0 left-0 right-0
-                 flex-row text-white w-full
-                  px-4 justify-between items-center z-50 transition-all duration-300 
-                 h-12 shadow-md">
+        <>
+            <div
+                className="fixed top-0 left-0 right-0 bg-gray-600 mt-16 shadow-md h-12 border-b border-gray-700 z-40 transition-all duration-300"
+                style={{ marginLeft: `${isMobile ? 0 : (isCollapsed ? 4 : 10)}%` }}
+            >
+                <div className="flex items-center justify-between px-4 sm:px-6 h-full">
+                    <div className="flex items-center gap-2 overflow-hidden">
+                        {getIconFromPath()}
+                        <h2 className="text-xl font-semibold text-white truncate max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                            {getTitleFromPath()}
+                        </h2>
+                    </div>
 
-                <div className="flex items-center">
-                    {getIconFromPath()}
-                    <h2 className="title text-xl font-semibold text-white truncate max-w-[100%]">
-                        {getTitleFromPath()}
-                    </h2>
+                    <button
+                        className="flex items-center gap-2 text-white hover:text-blue-100 transition-colors"
+                        onClick={() => navigate(-1)}
+                    >
+                        <ChevronLeft className="w-5 h-5" />
+                        <span className="hidden sm:inline">Back</span>
+                    </button>
                 </div>
-                <button
-                    className="back-button flex items-center gap-2 text-white hover:text-blue-100 transition-colors"
-                    onClick={() => navigate(-1)}
-                >
-                    <ChevronLeft className="w-5 h-5" />
-                    <span className="hidden sm:inline">Back</span>
-                </button>
-
             </div>
 
-            {/* Content Area */}
-            <div className="inventory-content">
-                <Outlet />
+            <div
+                className="max-w-8xl px-4 sm:px-6 lg:px-8 py-6 transition-all duration-300"
+            >
+                {/* Content Area */}
+                <div className="inventory-content mt-15">
+                    <Outlet />
+                </div>
             </div>
-        </div>
+
+        </>
     );
 }
 

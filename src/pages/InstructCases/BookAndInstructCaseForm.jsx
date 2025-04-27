@@ -570,7 +570,7 @@ export default function BookAndInstructCaseForm() {
 
     return (
 
-        <div className="p-4 md:p-6 lg:p-8 bg-white1 space-y-6 text-sm min-h-screen flex flex-col mt-5 mb-10">
+        <div className="pt-4 md:p-6 lg:p-8 space-y-6 text-sm min-h-screen flex flex-col mt-5 mb-10">
 
             <AppointmentInfoCard appointment={appointment} />
 

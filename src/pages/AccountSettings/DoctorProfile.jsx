@@ -42,7 +42,7 @@ const DoctorProfile = ({ doctor, onUpdate }) => {
         <div className="max-w-7xl mx-auto mt-20 md:px-0 lg:px-4">
             {/* Main Content Area with controlled scrolling */}
             <div className="flex-1">
-                <div className1="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mt-10">
+                <div>
                     {/* Profile Header - Responsive */}
                     <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-6">
                         <div className="flex flex-col sm:flex-row">

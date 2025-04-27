@@ -1,58 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Modern font stack */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Modern color palette */
+:root {
+  /* Light theme */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --accent-primary: #4f46e5;
+  --accent-secondary: #6366f1;
+  --border-primary: #e2e8f0;
+
+  /* Semantic colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  --text-primary: #020617;
+  --text-secondary: #1e293b;
+  --bg-primary: #ffffff;
 }
 
-a:hover {
-  color: #535bf2;
+/* Dark theme */
+.dark {
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --accent-primary: #6366f1;
+  --accent-secondary: #818cf8;
+  --border-primary: #334155;
 }
+
+
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Forced colors */
+@media (forced-colors: active) {
+  .sidebar-item.active {
+    forced-color-adjust: none;
+    background-color: Highlight;
+    color: HighlightText;
+  }
+}
+
+
 
 body {
   margin: 0;
+  overflow: hidden;
+}
+
+
+
+/* Upload Modal Styles */
+.upload-modal-content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.file-info {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.file-icon {
+  font-size: 2.5rem;
+  color: #e74c3c;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.file-details {
+  flex: 1;
+}
+
+.file-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 350px;
+}
+
+.file-size {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.progress-container {
+  margin: 1.5rem 0;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.progress-track {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.progress-percent {
+  text-align: right;
+  margin-top: 0.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.time-remaining {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Success Modal Styles */
+.success-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #00C851;
+}
+
+.success-message h4 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.success-message p {
+  color: #666;
+  margin: 0;
+}
+
+/* Error Modal Styles */
+.error-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-icon {
+  font-size: 2.5rem;
+  color: #ff4444;
+}
+
+.error-message h4 {
+  margin: 0 0 0.3rem 0;
+  color: #333;
+}
+
+.error-message p {
+  color: #666;
+  margin: 0;
+}
+
+/* Cancelled Modal Styles */
+.cancelled-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cancelled-icon {
+  font-size: 2.5rem;
+  color: #33b5e5;
+}
+
+.cancelled-content p {
+  color: #666;
+  margin: 0;
+}
+
+/* Button Styles */
+.upload-cancel-btn {
+  border-radius: 20px !important;
+  padding: 0.5rem 1.5rem !important;
+  font-weight: 500 !important;
+}
+
+.cancel-upload-btn {
+  /* Base Styles - Forced */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  user-select: none !important;
+  border: 1px solid transparent !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+
+  /* Default Color Scheme - Forced */
+  background-color: #fef2f2 !important;
+  color: #b91c1c !important;
+  border-color: #fecaca !important;
+
+  /* Hover State - Forced */
+  &:hover,
+  &.hover {
+    background-color: #fee2e2 !important;
+    color: #991b1b !important;
   }
 
-  a:hover {
-    color: #747bff;
+  /* Active State - Forced */
+  &:active,
+  &.active {
+    background-color: #fecaca !important;
+    transform: translateY(1px) !important;
   }
 
-  button {
-    background-color: #f9f9f9;
+  /* Focus State - Forced */
+  &:focus,
+  &.focus {
+    outline: 2px solid #fca5a5 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 3px rgba(252, 165, 165, 0.5) !important;
+  }
+
+  /* Disabled State - Forced */
+  &:disabled,
+  &.disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    background-color: #f3f4f6 !important;
+    color: #9ca3af !important;
+    border-color: #e5e7eb !important;
+    transform: none !important;
+  }
+
+  /* Icon Styles - Forced */
+  & .cancel-icon,
+  &>svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Size Variations */
+  &.small {
+    padding: 4px 12px !important;
+    font-size: 12px !important;
+  }
+
+  &.large {
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+  }
+
+  /* Full Width */
+  &.block {
+    display: flex !important;
+    width: 100% !important;
   }
 }
 
-body {
-  @apply bg-gray-100 text-gray-900;
+.success-confirm-btn {
+  border-radius: 20px !important;
+  padding: 0.5rem 1.5rem !important;
+  font-weight: 500 !important;
+}
+
+.text-primary {
+  color: #4285f4;
+}
+
+.text-success {
+  color: #00C851;
+}
+
+.text-danger {
+  color: #ff4444;
+}
+
+.text-info {
+  color: #33b5e5;
+}
+
+
+/* Base Modal Styles */
+.upload-modal,
+.result-modal {
+  border: none !important;
+  border-radius: 26px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02) !important;
+  overflow: hidden;
+  max-width: 480px;
+  width: 90%;
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Upload Modal Specific */
+.upload-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.file-preview {
+  margin-bottom: 24px;
+}
+
+.file-icon {
+  width: 80px;
+  height: 100px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff, #e0e9ff);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.file-icon.pdf {
+  background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+  color: #ef4444;
+}
+
+.file-icon.doc,
+.file-icon.docx {
+  background: linear-gradient(135deg, #f0f8ff, #e0f0ff);
+  color: #2563eb;
+}
+
+.file-icon.xls,
+.file-icon.xlsx {
+  background: linear-gradient(135deg, #f0fff4, #e0ffe8);
+  color: #10b981;
+}
+
+.extension {
+  position: absolute;
+  bottom: 8px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.upload-progress {
+  margin: 24px 0;
+}
+
+.progress-track {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 100px;
+  transition: width 0.3s ease;
+}
+
+.progress-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.percentage {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.upload-stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.stat-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stat-value {
+  font-weight: 500;
+  color: #334155;
+}
+
+/* Result Modal Specific */
+.result-container {
+  padding: 24px;
+  text-align: center;
+}
+
+.result-icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+}
+
+.icon-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.success .icon-bg {
+  background: #10b981;
+  animation: pulse-green 2s infinite;
+}
+
+.error .icon-bg {
+  background: #ef4444;
+  animation: pulse-red 2s infinite;
+}
+
+.checkmark,
+.crossmark {
+  width: 100%;
+  height: 100%;
+}
+
+.checkmark-circle {
+  stroke: #10b981;
+  stroke-width: 2;
+  fill: none;
+}
+
+.checkmark-check {
+  stroke: #10b981;
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-check 0.6s ease-out forwards 0.3s;
+}
+
+.crossmark-circle {
+  stroke: #ef4444;
+  stroke-width: 2;
+  fill: none;
+}
+
+.crossmark-cross {
+  stroke: #ef4444;
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-check 0.6s ease-out forwards 0.3s;
+}
+
+.result-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.result-content p {
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.file-meta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.file-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.error-details {
+  background: #fff5f5;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  color: #b91c1c;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.result-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+
+
+
+.rbc-month-view {
+  border: none !important;
+}
+
+.rbc-header {
+  padding: 8px 0 !important;
+  border-bottom: none !important;
+}
+
+.rbc-day-bg+.rbc-day-bg {
+  border-left: 1px solid #f3f4f6 !important;
+}
+
+.rbc-month-row+.rbc-month-row {
+  border-top: 1px solid #f3f4f6 !important;
+}
+
+
+
+
+
+/* Modal */
+
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .modal-container {
+    border-radius: 0;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: 0;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-footer button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Better scrolling for modal content */
+.modal-body {
+  overscroll-behavior: contain;
+}
+
+/* Better transitions */
+.modal-container {
+  transition: all 0.2s ease-out;
+}
+
+
+/* In your global CSS */
+@supports (-webkit-touch-callout: none) {
+
+  /* Safari/iOS specific fixes */
+  .mobile-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+  }
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #f3f4f6;
+}
+
+/* In your global CSS */
+@media (pointer: coarse) {
+  .touch-scroll {
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .touch-scroll>* {
+    scroll-snap-align: start;
+  }
 }

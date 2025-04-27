@@ -144,7 +144,7 @@ const ResponsiveAppointmentTable = ({ filteredAppointments, isModalExpanded, pro
             {!isMobile && (
                 <>
                     {isModalExpanded ? (
-                        <div className1="hidden md:block">
+                        <div >
                             {filteredAppointments.length > 0 ? (
                                 <table className="w-full table-auto mt-4 border-separate1 border-spacing-1.2 text-left">
                                     <thead className="bg-blue-200">

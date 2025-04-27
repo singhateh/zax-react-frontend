@@ -5,35 +5,41 @@ import {
   ScrollText,
   OctagonAlert,
   ReceiptText,
+  UserCog2,
 } from "lucide-react";
 import Tabs from "../components/Tabs";
 import { Outlet } from "react-router-dom";
+import { useStateContext } from "../contex/ContexProvider";
+import { goToDoctorProfile } from "../utilities/navigationUtils";
 
 function AccountSettingsLayout() {
   const [activeTab, setActiveTab] = useState("AccountSetup");
+  const { selectedDoctor } = useStateContext();
+
   const tabs = [
     {
-      label: "AccountSetup",
-      icon: <Wrench />,
-      route: "/account-settings/setup",
+      label: "Account Setup",
+      icon: <UserCog2 />,
+      route: goToDoctorProfile(null, selectedDoctor, true),
+      state: selectedDoctor,
     },
     {
-      label: "AccountPayment",
+      label: "Payment Setup",
       icon: <BadgePoundSterling />,
       route: "/account-settings/payment",
     },
     {
-      label: "ZaxReportinng",
+      label: "Contract Setups",
       icon: <ScrollText />,
-      route: "/account-settings/reports",
+      route: "/account-settings/contracts",
     },
     {
-      label: "ZaxAlerts",
+      label: "Zax Alerts",
       icon: <OctagonAlert />,
       route: "/account-settings/alerts",
     },
     {
-      label: "ZaxBilling",
+      label: "Zax Billing",
       icon: <BadgePoundSterling />,
       route: "/account-settings/billing",
     },
@@ -44,9 +50,9 @@ function AccountSettingsLayout() {
     },
   ];
   return (
-    <div className="bg-red fixed w-full lg:w-[calc(100%-160px)] ">
+    <div className="max-w-full px-0 sm:px-0 lg:px-8 py-6">
       <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="w-full max-w-full">
+      <div className="inventory-content mt-10">
         <Outlet />
       </div>
     </div>
