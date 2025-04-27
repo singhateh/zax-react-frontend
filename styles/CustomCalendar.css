@@ -1,0 +1,72 @@
+/* Custom Styles for react-big-calendar */
+.custom-calendar {
+    font-family: "Inter", sans-serif;
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.rbc-toolbar {
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+    padding: 2px;
+    color: white;
+    border-radius: 10px;
+}
+
+.rbc-toolbar button {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.rbc-toolbar button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.rbc-header {
+    background: #f3f4f6;
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1e293b;
+}
+
+.rbc-event {
+    background: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    padding: 2px 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.rbc-event:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rbc-today {
+    background: rgba(75, 85, 99, 0.1) !important;
+}
+
+.rbc-selected {
+    background: #9333ea !important;
+}
+
+.dark .custom-calendar {
+    background: #1e293b;
+}
+
+.dark .rbc-toolbar {
+    background: linear-gradient(90deg, #9333ea, #4f46e5);
+}
+
+.dark .rbc-header {
+    background: #374151;
+    color: #fff;
+}
+
+.dark .rbc-event {
+    background: #6366f1;
+}

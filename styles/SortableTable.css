@@ -1,0 +1,55 @@
+.table-scroll-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 65vh;
+    width: 100%;
+}
+
+.table-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #4b6b8e;
+    /* Thumb color */
+    border-radius: 10px;
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #4b6b8e;
+    border-radius: 10px;
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .table-scroll-container {
+        max-height: 60vh;
+        background-color: red !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-scroll-container {
+        max-height: 50vh;
+        background-color: red !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-scroll-container {
+        max-height: 40vh;
+        background-color: red !important;
+    }
+}

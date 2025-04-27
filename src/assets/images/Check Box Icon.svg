@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1065" data-name="Rectangle 1065" width="18" height="18" rx="5" transform="translate(783 424)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Check_Box_Icon" data-name="Check Box Icon" transform="translate(-783 -424)" clip-path="url(#clip-path)">
+    <path id="_93ebda1b64c53d147d75cea475d7058b" data-name="93ebda1b64c53d147d75cea475d7058b" d="M14.5,27A12.5,12.5,0,1,0,2,14.5,12.5,12.5,0,0,0,14.5,27Zm4.42-16.92a1.251,1.251,0,1,1,1.767,1.77l-7.066,7.066-.005,0a1.246,1.246,0,0,1-1.767,0l-.005,0L8.313,15.385a1.25,1.25,0,1,1,1.768-1.768l2.652,2.651,6.188-6.187Z" transform="translate(778 419)" fill="#08f" fill-rule="evenodd"/>
+  </g>
+</svg>

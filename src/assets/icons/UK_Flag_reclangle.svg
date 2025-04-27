@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="31" viewBox="0 0 49 31">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_251" data-name="Rectangle 251" width="49" height="31" rx="2" transform="translate(0 -0.289)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_658" data-name="Path 658" d="M0,0V32.076H64.152V0Z"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_655" data-name="Path 655" d="M32.076,16.038H64.152V32.076Zm0,0V32.076H0Zm0,0H0V0Zm0,0V0H64.152Z"/>
+    </clipPath>
+  </defs>
+  <g id="UK_Flag_reclangle" transform="translate(0 0.289)" clip-path="url(#clip-path)">
+    <g id="Flag_of_the_United_Kingdom" transform="translate(-7.076 -0.887)" clip-path="url(#clip-path-2)">
+      <path id="Path_652" data-name="Path 652" d="M0,0V32.076H64.152V0Z" fill="#012169"/>
+      <path id="Path_653" data-name="Path 653" d="M0,0,64.152,32.076M64.152,0,0,32.076" stroke="#fff" stroke-width="6"/>
+      <g id="Group_4586" data-name="Group 4586" clip-path="url(#clip-path-3)">
+        <path id="Path_654" data-name="Path 654" d="M0,0,64.152,32.076M64.152,0,0,32.076" stroke="#c8102e" stroke-width="4"/>
+      </g>
+      <path id="Path_656" data-name="Path 656" d="M32.076,0V32.076M0,16.038H64.152" stroke="#fff" stroke-width="10"/>
+      <path id="Path_657" data-name="Path 657" d="M32.076,0V32.076M0,16.038H64.152" stroke="#c8102e" stroke-width="6"/>
+    </g>
+  </g>
+</svg>
