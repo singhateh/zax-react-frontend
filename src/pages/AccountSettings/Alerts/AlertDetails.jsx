@@ -10,7 +10,6 @@ const AlertDetails = ({ alert, isDetailOpen, setIsDetailOpen }) => {
         return null;
     }
 
-
     const getStatusColor = (status) => {
         const statusMap = {
             'active': { bg: 'bg-emerald-50', text: 'text-emerald-800', icon: <CheckCircle className="w-4 h-4" /> },
@@ -25,7 +24,6 @@ const AlertDetails = ({ alert, isDetailOpen, setIsDetailOpen }) => {
     };
 
     const statusInfo = getStatusColor(alert.priority);
-
 
     return (
         <Modal
