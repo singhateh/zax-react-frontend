@@ -1,7 +1,7 @@
 import React from "react";
 import router from "./Router"; // Custom Router logic
 import { ContextProvider } from "./contex/ContexProvider";
-import { HashRouter, RouterProvider } from "react-router-dom"; // Import HashRouter
+import { RouterProvider } from "react-router-dom"; // Import HashRouter
 import { registerSW } from 'virtual:pwa-register';
 
 // 🔁 Move this outside the component
@@ -18,9 +18,7 @@ function App() {
   return (
     <React.StrictMode>
       <ContextProvider>
-        <HashRouter> {/* Use HashRouter instead of BrowserRouter */}
-          <RouterProvider router={router} basename="/zax-react-frontend" />
-        </HashRouter>
+        <RouterProvider router={router} basename="/zax-react-frontend" />
       </ContextProvider>
     </React.StrictMode>
   );
