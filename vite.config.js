@@ -17,7 +17,7 @@ export default defineConfig({
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/zax-react-frontend/',  // Change this line to match the subdirectory
         icons: [
           {
             src: '/pwa-192x192.png',
@@ -37,6 +37,7 @@ export default defineConfig({
           }
         ]
       }
-    })],
-  base: '/zax-react-frontend/',
+    })
+  ],
+  base: '/zax-react-frontend/',  // Make sure this matches your GitHub Pages subdirectory
 })

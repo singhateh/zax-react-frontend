@@ -1,10 +1,10 @@
 import React from "react";
-import router from "./Router";
+import router from "./Router"; // Custom Router logic
 import { ContextProvider } from "./contex/ContexProvider";
-import { RouterProvider } from "react-router-dom";
+import { HashRouter, RouterProvider } from "react-router-dom"; // Import HashRouter
 import { registerSW } from 'virtual:pwa-register';
 
-// 🔁 MOVE THIS OUTSIDE THE COMPONENT
+// 🔁 Move this outside the component
 registerSW({
   onNeedRefresh() {
     console.log("New content available, refresh the page.");
@@ -18,7 +18,9 @@ function App() {
   return (
     <React.StrictMode>
       <ContextProvider>
-        <RouterProvider router={router} />
+        <HashRouter> {/* Use HashRouter instead of BrowserRouter */}
+          <RouterProvider router={router} />
+        </HashRouter>
       </ContextProvider>
     </React.StrictMode>
   );
