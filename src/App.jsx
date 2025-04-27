@@ -19,7 +19,7 @@ function App() {
     <React.StrictMode>
       <ContextProvider>
         <HashRouter> {/* Use HashRouter instead of BrowserRouter */}
-          <RouterProvider router={router} />
+          <RouterProvider router={router} basename="/zax-react-frontend" />
         </HashRouter>
       </ContextProvider>
     </React.StrictMode>
