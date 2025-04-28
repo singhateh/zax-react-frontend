@@ -4,7 +4,6 @@ import { ContextProvider } from "./contex/ContexProvider";
 import { RouterProvider } from "react-router-dom"; // Import HashRouter
 import { registerSW } from 'virtual:pwa-register';
 
-// 🔁 Move this outside the component
 registerSW({
   onNeedRefresh() {
     console.log("New content available, refresh the page.");

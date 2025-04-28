@@ -37,19 +37,19 @@ const router = createBrowserRouter([
     element: <NotFound />,
   },
   {
-    path: "/",
+    path: "/zax-react-frontend",
     element: <AuthLayout />,
-    children: [ // upper level children
+    children: [
       {
         path: "dashboard",
         element: <Dashboard />,
         title: "Dashboard",
       },
       {
-        path: "doctors", // Removed leading "/"
+        path: "doctors",
         element: <DoctorLayout />,
         title: "Doctors",
-        children: [ // child level children
+        children: [
           { path: "", element: <Doctors />, title: "Doctors" },
           { path: "agencies", element: <Agencies />, title: "Agencies" },
           { path: "agencies-notes", element: <AgenciesNote />, title: "Agencies Notes" },
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "account-settings", // Removed leading "/"
+        path: "account-settings",
         element: <AccountSettingsLayout />,
         title: "Account Settings",
         children: [
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "zax-cal", // Removed leading "/"
+        path: "zax-cal",
         element: <ZaxCalLayout />,
         title: "Zax Calendar",
         children: [
@@ -91,32 +91,16 @@ const router = createBrowserRouter([
         element: <InstructCaseLayout />,
         title: "Instruct Cases",
         children: [
-          {
-            path: "",
-            element: <BookAndInstructCaseForm />,
-            title: "Instruct & Book Appointment",
-          },
-          {
-            path: "book/:id", // fixed from {id} to :id for React Router
-            element: <BookAndInstructCaseForm />,
-            title: "Instruct & Book Appointment",
-          },
-          {
-            path: "edit/:id",
-            element: <BookAndInstructCaseForm />,
-            title: "Instruct & Book Appointment",
-          },
-          {
-            path: "appointment-book-page",
-            element: <AppointmentBookPage />,
-            title: "Book Appointment",
-          },
+          { path: "", element: <BookAndInstructCaseForm />, title: "Instruct & Book Appointment" },
+          { path: "book/:id", element: <BookAndInstructCaseForm />, title: "Instruct & Book Appointment" },
+          { path: "edit/:id", element: <BookAndInstructCaseForm />, title: "Instruct & Book Appointment" },
+          { path: "appointment-book-page", element: <AppointmentBookPage />, title: "Book Appointment" },
         ],
-      }
+      },
     ],
   },
   {
-    path: "/", // Guest Layout for non-authenticated users
+    path: "/",
     element: <GuestLayout />,
     children: [
       { path: "login", element: <Login />, title: "Login" },
