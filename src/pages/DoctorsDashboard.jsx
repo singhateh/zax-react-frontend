@@ -1,6 +1,9 @@
 import Appointments from "./ZaxCal/Appointments";
 
 export default function DoctorDashboard() {
+
+    console.log('Nw env' + import.meta.env.VITE_BASE_URL);  // Check if the variable is loaded correctly
+
     return (
         <div>
             {/* Stats Cards */}

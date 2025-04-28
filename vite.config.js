@@ -39,5 +39,5 @@ export default defineConfig({
       }
     })
   ],
-  base: '/zax-react-frontend/',  // Make sure this matches your GitHub Pages subdirectory
+  base: '/zax-react-frontend/',  // Make sure this matches your GitHub Pages subdirectory only not local dev
 })

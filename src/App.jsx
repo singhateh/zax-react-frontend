@@ -15,6 +15,7 @@ registerSW({
 });
 
 function App() {
+
   return (
     <React.StrictMode>
       <ContextProvider>
