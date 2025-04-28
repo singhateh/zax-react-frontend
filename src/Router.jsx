@@ -37,7 +37,7 @@ const router = createBrowserRouter([
   //   element: <NotFound />,
   // },
   {
-    path: "/zax-react-frontend",
+    path: "/",
     element: <AuthLayout />,
     children: [
       {
