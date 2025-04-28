@@ -18,7 +18,7 @@ function App() {
   return (
     <React.StrictMode>
       <ContextProvider>
-        <RouterProvider router={router} basename="/zax-react-frontend" />
+        <RouterProvider router={router} />
       </ContextProvider>
     </React.StrictMode>
   );
