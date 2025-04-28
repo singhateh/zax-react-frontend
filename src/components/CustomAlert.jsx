@@ -1,6 +1,6 @@
 import ReactDOMServer from 'react-dom/server'; // Import for rendering React components to static markup
 import Swal from "sweetalert2";
-import '../../styles/swal.css';
+// import '../../styles/swal.css';
 
 import { CheckCircle, XCircle, AlertTriangle, Info, Trash, Plus, Trash2Icon } from 'lucide-react'; // Import the icons you need
 
