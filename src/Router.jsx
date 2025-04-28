@@ -32,10 +32,10 @@ import NotFound from "./components/NotFound";
 import ZaxBilling from "./pages/AccountSettings/Billings/ZaxBilling";
 
 const router = createBrowserRouter([
-  {
-    path: "*",
-    element: <NotFound />,
-  },
+  // {
+  //   path: "*",
+  //   element: <NotFound />,
+  // },
   {
     path: "/zax-react-frontend",
     element: <AuthLayout />,
